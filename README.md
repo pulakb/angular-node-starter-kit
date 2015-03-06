@@ -3,6 +3,6 @@ Skeleton of angular-node project which can be used as a starting point of any An
 
 Inspired from the following links:
 
-[angular-app] (https://github.com/angular-app/angular-app)
-[ngBoilerplate] (https://github.com/ngbp/ngbp)
+-[angular-app] (https://github.com/angular-app/angular-app)
+-[ngBoilerplate] (https://github.com/ngbp/ngbp)
 

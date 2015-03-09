@@ -6,6 +6,13 @@ module.exports = {
    * The `dist_dir` folder is where our app resides once it's completely built.
    */
   dist_dir: 'dist',
+   /**
+   * The `debug_dir` folder is where JS Hint errors are documented.
+   */ 
+  debug_dir: 'debug',
+   /**
+   * The `livereload_port`
+   */   
   livereload_port: 35729,
 
   /**
@@ -57,11 +64,9 @@ module.exports = {
    */
   vendor_files: {
     js: [
-      'vendor/angular/angular.js',
-      'vendor/angular-bootstrap/ui-bootstrap-tpls.min.js',
-      'vendor/placeholders/angular-placeholders-0.0.1-SNAPSHOT.min.js',
-      'vendor/angular-ui-router/release/angular-ui-router.js',
-      'vendor/angular-ui-utils/modules/route/route.js'
+      'vendor/bower_components/angular/angular.min.js',
+      'vendor/bower_components/angular-resource/angular-resource.min.js',
+      'vendor/bower_components/angular-ui-router/release/angular-ui-router.min.js'
     ],
     css: [
     ],

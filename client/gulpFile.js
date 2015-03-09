@@ -2,7 +2,7 @@
 var gulp = require('gulp'),
 	concat = require('gulp-concat'),
 	html2js = require('gulp-html2js'),
-	es = require('event-stream'),
+	series = require('stream-series'),
 	inject = require('gulp-inject'),
 	connect = require('gulp-connect'),
 	jshint = require('gulp-jshint'),
@@ -28,24 +28,48 @@ var buildConfig = require( './build.config.js' );
 * 2. Minify files
 * 3. Concat files as 'styles.css'
 */
+var cssStream;
+
 gulp.task('minify-css', function() {
-  return gulp.src(buildConfig.app_files.css)
+  cssStream = gulp.src(buildConfig.app_files.css)
   	.pipe(stripCssComments())
     .pipe(minifyCSS())
     .pipe(concat('styles.css'))
-    .pipe(gulp.dest('./dist/css'))
+    .pipe(gulp.dest('./dist/css'));
+});
+
+// Lint Task
+gulp.task('lint', function() {
+  return gulp.src(buildConfig.app_files.js)
+    .pipe(jshint())
+    .pipe(jshint.reporter('gulp-jshint-html-reporter', {
+      filename: buildConfig.debug_dir + '/jshint-output.html'
+    }));
+});
+
+gulp.task('scripts', function () {
+	// Concatenate vendor scripts 
+	var vendorStream = gulp.src(buildConfig.vendor_files.js)
+	  .pipe(concat('vendors.js'))
+	  .pipe(gulp.dest('./dist/js'));
+
+
+	// Concatenate AND minify app sources 
+	var appStream = gulp.src(buildConfig.app_files.js)
+	  .pipe(concat('application.js'))
+	  .pipe(uglify())
+	  .pipe(gulp.dest('./dist/js'));
+
+  return gulp.src('./src/index.html')
+  .pipe(inject(series(cssStream)))
+  .pipe(inject(series(vendorStream, appStream)))
+  .pipe(gulp.dest('./dist'));
+
 });
 
 
 
 
-
-
-
-
-
-
-
 // Default Task
-gulp.task('default', ['minify-css']);
+gulp.task('default', ['minify-css', 'lint', 'scripts']);
 

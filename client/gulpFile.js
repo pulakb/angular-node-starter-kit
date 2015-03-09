@@ -1,35 +1,51 @@
+//Include gulp and other plug-ins
 var gulp = require('gulp'),
+	concat = require('gulp-concat'),
+	html2js = require('gulp-html2js'),
+	es = require('event-stream'),
 	inject = require('gulp-inject'),
 	connect = require('gulp-connect'),
-	minifyHTML = require('gulp-minify-html'),
-	stripDebug = require('gulp-strip-debug'),
 	jshint = require('gulp-jshint'),
-	
+	karma = require('gulp-karma'),
+	minifyCSS = require('gulp-minify-css'),
+	minifyHTML = require('gulp-minify-html'),
+	rename = require("gulp-rename"),
+	stripCssComments = require('gulp-strip-css-comments'),
+	stripDebug = require('gulp-strip-debug'),
+	uglify = require('gulp-uglify'),
+	watch = require('gulp-watch');
 
+/**
+* Load in our build configuration file.
+*/
+var buildConfig = require( './build.config.js' );
 
+// Tasks
+// =====
 
-gulp.task('lint', function() {
-  return gulp.src('./lib/*.js')
-    .pipe(jshint())
-    .pipe(jshint.reporter('gulp-jshint-html-reporter', {
-      filename: __dirname + '/jshint-output.html'
-    }));
+/** CSS
+* 1. Strip comments
+* 2. Minify files
+* 3. Concat files as 'styles.css'
+*/
+gulp.task('minify-css', function() {
+  return gulp.src(buildConfig.app_files.css)
+  	.pipe(stripCssComments())
+    .pipe(minifyCSS())
+    .pipe(concat('styles.css'))
+    .pipe(gulp.dest('./dist/css'))
 });
 
-gulp.task('minify-html', function() {
-  var opts = {
-    conditionals: true,
-    spare:true
-  };
- 
-  return gulp.src('./static/html/*.html')
-    .pipe(minifyHTML(opts))
-    .pipe(gulp.dest('./dist/'));
-});
 
-gulp.task('default', function () {
-    return gulp.src('src/app.js')
-        .pipe(stripDebug())
-        .pipe(gulp.dest('dist'));
-});
+
+
+
+
+
+
+
+
+
+// Default Task
+gulp.task('default', ['minify-css']);
 

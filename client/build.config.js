@@ -3,12 +3,10 @@
  */
 module.exports = {
   /**
-   * The `build_dir` folder is where our projects are compiled during
-   * development and the `compile_dir` folder is where our app resides once it's
-   * completely built.
+   * The `dist_dir` folder is where our app resides once it's completely built.
    */
   dist_dir: 'dist',
-  compile_dir: 'bin',
+  livereload_port: 35729,
 
   /**
    * This is a collection of file patterns that refer to our app code (the
@@ -20,6 +18,7 @@ module.exports = {
    * app's unit tests.
    */
   app_files: {
+    css: [ 'src/styles/**/*.css' ],
     js: [ 'src/**/*.js', '!src/**/*.spec.js', '!src/assets/**/*.js' ],
     jsunit: [ 'src/**/*.spec.js' ],
     
@@ -68,5 +67,5 @@ module.exports = {
     ],
     assets: [
     ]
-  },
+  }
 };

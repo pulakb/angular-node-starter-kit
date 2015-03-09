@@ -38,11 +38,11 @@ submodules that need them to ensure proper dependency handling. These are
 app-wide dependencies that are required to assemble your app.
 
 ```js
-angular.module( 'ngBoilerplate', [
+angular.module( 'ngAppName', [
   'templates-app',
   'templates-common',
-  'ngBoilerplate.module-1',
-  'ngBoilerplate.module-2'
+  'ngAppName.module-1',
+  'ngAppName.module-2'
   'ui.router',
   'ui.route'
 ])

@@ -1,0 +1,1 @@
+All angular, jQuery and other vendor specific files will be there in bower_components/ folder.

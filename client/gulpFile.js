@@ -86,12 +86,26 @@ gulp.task('minify-html', function() {
     .pipe(gulp.dest('./dist'));
 });
 
-// Watch Files For Changes - Not working 
-/*gulp.task('watch', function() {
-    gulp.watch(buildConfig.app_files.js, ['lint', 'scripts']);
-    gulp.watch(buildConfig.app_files.css, ['minify-css']);
+// Watch Files For Changes
+gulp.task('watch', function() {
+    gulp.watch(buildConfig.app_files.js, ['lint', 'scripts']); // Not working properly
+    gulp.watch(buildConfig.app_files.css, ['minify-css']); // working fine
+});
+
+// Setting up a webserver
+/*gulp.task('webserver', function() {
+  connect.server({
+    livereload: true,
+    root: ['dist']
+  });
+});*/
+
+
+/*gulp.task('livereload', function() {
+  gulp.src([buildConfig.app_files.css, buildConfig.app_files.js])
+    .pipe(watch())
+    .pipe(connect.reload());
 });*/
 
 // Default Task
-gulp.task('default', [ 'minify-css', 'lint', 'scripts','minify-html'/*, 'watch' */]);
-
+gulp.task('default', [ 'minify-css', 'lint', 'scripts','minify-html', 'watch' ]);

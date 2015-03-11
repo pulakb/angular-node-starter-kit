@@ -28,5 +28,9 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
       controller: function($scope) {
         $scope.things = ["A", "Set", "Of", "Things"];
       }
+    })
+    .state('state3', {
+      url: "/state3",
+      templateUrl: "partials/state2.html"
     });
 });

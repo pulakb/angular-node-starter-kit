@@ -64,7 +64,6 @@ gulp.task('scripts', function () {
 
     // Concatenate AND minify app sources
     appStream = gulp.src(buildConfig.app_files.js)
-        .pipe(stripDebug())
         .pipe(concat('application.js'))
         .pipe(gulp.dest('./dist/js'));
 });
@@ -103,11 +102,26 @@ gulp.task('minify-html', function() {
         .pipe(gulp.dest('./dist'));
 });
 
+// Copy Image files
+gulp.task('copy-images', function() {
+    return gulp.src(buildConfig.assets)
+        .pipe(gulp.dest('./dist/assets'));
+});
+
+// Copy Template files
+gulp.task('copy-templates', function() {
+    gulp.src(buildConfig.app_files.atpl)
+        .pipe(gulp.dest('./dist/templates'));
+
+    gulp.src(buildConfig.app_files.ctpl)
+        .pipe(gulp.dest('./dist/templates'));
+});
+
 // Inject CSS, JS & Template files in index.html
 gulp.task('inject-files', function () {
     return gulp.src('./src/index.html')
         .pipe(inject(series(cssStream)))
-        .pipe(inject(series(vendorStream, appStream, applicationTemplateStream, commonTemplateStream)))
+        .pipe(inject(series(vendorStream, appStream)))
         .pipe(gulp.dest('./dist'));
 });
 
@@ -133,4 +147,4 @@ gulp.task('inject-files', function () {
  });*/
 
 // Default Task
-gulp.task('default', [ 'minify-css', 'lint', 'scripts', 'templates', 'inject-files' ]);
+gulp.task('default', [ 'minify-css', 'lint', 'scripts', 'copy-images', 'copy-templates', 'inject-files' ]);

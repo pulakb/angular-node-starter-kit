@@ -1,0 +1,685 @@
+body {
+	margin:0;
+	border:none;
+	padding:0;
+}
+
+.mainlayout {
+	position: absolute;
+	/* increased height and width to fix screen shaking*/
+	width:100%;
+	height:100%;
+	background-color: #D0D0D0;
+	background-color: #D8D8D8    ;
+}
+				 
+#mainlayout {
+	visibility: visible;
+	width: 1200px;
+	height: 500;
+	overflow: hidden;
+}
+
+.container {
+	position: absolute;
+	top: 100px;
+	left: 45px;
+}						
+/* Reset max-height when in full screen mode */
+video:-webkit-full-screen { max-height: 100%; }
+video:-moz-full-screen    { max-height: 100%; }
+
+ #header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 75px;
+	width: 100%;
+	color: #DDDDDD;
+	background-color: #282828;
+	background-color: navy;
+}
+
+.footer {
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+	padding: 15px 0;
+	border-top: 1px solid #e5e5e5;
+	background-color: #e5e5e5;
+	width: 100%;
+}
+
+#menutext {
+	position: absolute;
+	top: 25%;
+	/*left: 1%;*/
+	left: 3%;
+	font-family: inherit;
+	font-weight: bold;
+	font-size: 40px;
+}
+#clock {
+	position: absolute;
+	right: 10.1%;
+	top: 50%;
+	font-size: 46px;
+	font-weight: normal;
+	font-family: arial;
+}
+
+#overlay {
+	display: none;
+	z-index: 2;
+	background: #000;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	opacity: 1.0
+	text-align: center;
+}
+#specialBox {
+	display: none;
+	position: relative;
+	z-index: 3;
+	margin: 150px auto 0px auto;
+	width: 500px; 
+	height: 300px;
+	background: #FFF;
+	background:red;
+	color: #000;
+	
+}
+#wrapper {
+	position:absolute;
+	top: 0px;
+	left: 0px;
+	padding-left:24px;
+}
+ 
+ #grid { 
+	width:271px;
+	position:absolute;
+	top:280px;
+	left:45px;
+	padding:0px !important;
+	margin:0px !important;
+	border-top:1px solid gray;
+	border-right:1px solid gray;
+	border-left:1px solid gray;
+	border-bottom:1px solid gray;
+	background-color: #1c1c1c;
+	background-color: lightgray;
+
+ }
+
+.layout_frame1 {
+	border-width:1px 0px;
+	border-collapse: collapse;
+	border-color:gray;
+	border-style:solid;
+	height: 48px;
+	font-size: 20px;
+	font-family: arial;
+	text-align: center;
+	color:white;
+	white-space: nowrap;
+	overflow: hidden;
+	width:270px;
+	margin:0px;	
+	background-color: #282828;
+	background-color: royalblue;
+}
+
+.programList {
+	border-bottom:1px solid gray;
+	border-top:1px solid gray;
+	border-right:1px solid gray;
+	margin:0px !important;
+	padding:0px !important;
+	position: absolute;
+	background-color: #1c1c1c;
+	background-color: royalblue;
+	left: 321px;
+	top:280px;
+	width:828px;				
+}
+
+
+.layout_frame {
+			border: 1px solid gray;
+			border-collapse: collapse;
+			height: 26px;
+			float: left;
+			font-size: 20px;
+			font-family: arial;
+			text-align: left;
+			color: #000;
+			white-space: nowrap;
+			overflow: hidden;
+			/*padding:10px;*/
+		height:41px;
+	 /* padding:5px 15px 0px 15px;*/
+	 padding:7px 12px 0px 20px;
+	 
+
+		}
+
+ div.today{
+		 /*	 border-top:none!important;*/
+		 font-size:20px;
+		 font-family:arial;
+		 font-style:normal;
+		 font-weight:bolder;
+				/* background: url( "img/btn.png" ) no-repeat;
+				/* padding:5px 10px 14px 126px;*/
+				color:#000;
+		}
+ .selected {
+				font-weight: normal;
+				/*background: url( "img/guide_selected_bg.png" ) repeat-x;*/
+				border:0;
+				height:46px;
+				padding:2px 17px;
+		background-color: #696969;
+		
+		background-color: gray;
+	 
+		color:#ffffff;
+
+		}
+
+
+#programList #row0 div{
+									/*width:272px!important;*/
+						}
+.active{
+			background:url("img/now.png") no-repeat 0 0;
+			float:left;
+			 }
+#row0 div{
+				 font-weight:bolder;
+				
+				 /*
+				 height:36px!important;
+				 padding-top:9px;*/
+				 /*border-top:none!important;*/
+				 }
+
+
+		.odd {
+							background-color: #1c1c1c;
+							 background-color: navy;
+		text-align:left;
+		color:#ffffff;
+		}
+	
+		.even{
+				background-color: #1c1c1c;
+				background-color: navy;
+				text-align:left;
+		color:#ffffff;
+
+	
+		}
+
+	 div.gridtextHolder{float:left;overflow:hidden; width:230px;color:#ffffff;}
+	 
+	 .selected div.gridtextHolder{padding:5px 0px 0px 0px;}    
+
+		/* Clipping caps for Selectables */
+div.tvlib_gadget_selectable_clip_left {
+position:relative;
+background:url(img/sel_clip_l.png) no-repeat left center;
+height:31px;
+width:35px;
+float:left;
+margin-left:5px;
+padding-top:5px;
+}
+
+div#logo {
+	border: 1px solid #A2C9E4;
+	height: 52px;
+	left: 890px;
+	position: absolute;
+	top: 5px;
+	width: 255px;
+	background-image: url('/dist/assets/img/logo.png');
+	background-repeat: no-repeat;
+}
+
+.selected div.tvlib_gadget_selectable_clip_left{padding-top:15px;}
+
+div.tvlib_gadget_selectable_clip_right {
+position:relative;
+background:url(img/sel_clip_r.png) no-repeat right center;
+height:31px;
+width:35px;
+float:left;
+margin-right:5px;
+padding-top:5px;
+}
+.selected div.tvlib_gadget_selectable_clip_right{padding-top:15px;}
+
+						
+		div:hover.Category {
+				background-color: #7e90c4;
+		}
+
+#programme_info {
+	position:absolute;
+	top:0px;
+	left:45px;
+	font-family:arial;
+	width:570px;
+	color:#ddd;
+}
+
+div.tvlib_gadget_proginfo {
+width:566px;
+height:258px;
+font-size:26px;
+}
+
+div#tvlib_gadget_proginfo_title{
+font-size:20px;
+width:274px;
+margin-top:10px;
+font-weight:normal;
+white-space:nowrap;
+overflow:hidden;
+color:black;
+}
+
+div#tvlib_gadget_proginfo_time
+{
+font-size:20px;
+width:250px;
+font-weight:normal;
+}
+
+div#tvlib_gadget_proginfo_time {
+position:absolute;
+left:130px;
+top:40px;
+width:160px;
+color:black;
+}
+
+
+div#tvlib_gadget_proginfo_date{
+visibility:visible;
+position:absolute;
+top:40px;
+font-size:20px;
+font-weight:normal;
+color:black;
+}
+
+
+
+
+div#tvlib_gadget_proginfo_synopsis{
+top:104px;
+left:0;
+width:555px;
+height:90px;
+font-size:20px;
+line-height:114%;
+font-weight:normal;
+position:absolute;
+overflow:hidden;
+color:black;
+}
+
+
+div#tvlib_gadget_proginfo_channel_name{
+position:absolute;
+height:30px;
+top:10px;
+right:10px;
+font-size:20px;
+width:180px;
+white-space:nowrap;
+text-align:right;
+color:black;
+/*overflow:scroll;*/
+}
+
+div#tvlib_gadget_proginfo_channel_logo {
+bottom:-5px;
+right:10px;
+width:100px;
+height:40px;
+background-position:bottom right;
+background-repeat:no-repeat;
+position:absolute;
+padding-top:4px;
+/*background-color:blue;*/
+}
+
+
+div#tvlib_gadget_proginfo_extended_attributes {
+display:block;
+position:absolute;
+top:73px;
+font-size:17px;
+width:350px;
+}
+
+div#tvlib_gadget_proginfo_extended_attributes > div{
+height:27px;
+font-size:18px;
+/*margin-top:2px;*/
+}
+
+div#tvlib_gadget_proginfo_attributes{
+position:relative;
+top:30px;
+right:10px;
+float:right;
+width:200px;
+}
+
+div#tvlib_gadget_proginfo_attributes > div {
+/*top:40px;*/
+height:20px;
+padding:0 3px;
+/*right:16px;*/
+font-size:18px;
+position:relative;
+float:right;
+
+
+}
+
+
+/* Standard attribute icons */
+div#tvlib_gadget_proginfo_attributes_blocked{
+width:18px;
+background-image:url(icons/1280_720/content_bl.png);
+background-repeat:no-repeat;
+}
+
+div#tvlib_gadget_proginfo_attributes_locked{
+width:18px;
+background-image:url(icons/1280_720/content_bl.png);
+background-repeat:no-repeat;
+}
+
+div#tvlib_gadget_proginfo_attributes_subtitles{
+width:24px;
+background-image:url(icons/1280_720/subtitles.png);
+background-repeat:no-repeat;
+}
+
+div#tvlib_gadget_proginfo_attributes_captions{
+width:24px;
+background-image:url(icons/1280_720/captions.png);
+background-repeat:no-repeat;
+}
+
+div#tvlib_gadget_proginfo_attributes_hidef{
+width:25px;
+background-image:url(icons/1280_720/hidef.png);
+background-repeat:no-repeat;
+}
+
+div#tvlib_gadget_proginfo_attributes_rerun{
+width:19px;
+background-image:url(icons/1280_720/rerun.png);
+background-repeat:no-repeat;
+margin-top:5px;
+
+}
+
+div#tvlib_gadget_proginfo_attributes_firstrun{
+width:50px;
+background-image:url(icons/1280_720/firstrun.png);
+background-repeat:no-repeat;
+}
+
+div#tvlib_gadget_proginfo_attributes_recording{
+width:18px;
+background-image:url(icons/1280_720/content_s.png);
+background-repeat:no-repeat;
+}
+
+div#tvlib_gadget_proginfo_attributes_recording_series,
+div#tvlib_gadget_extproginfo_attributes_recording_series,
+div#tvlib_gadget_proginfo_extended_attributes_recording_series,
+div#tvlib_gadget_extproginfo_extended_attributes_recording_series {
+width:30px;
+background-image:url(icons/1280_720/series.png);
+background-repeat:no-repeat;
+}
+
+div#tvlib_gadget_proginfo_attributes_fav{
+width:21px;
+background-image:url(icons/1280_720/content_c.png);
+}
+
+div#tvlib_gadget_proginfo_attributes_rem{
+width:21px;
+background-image:url(icons/1280_720/content_r.png);
+}
+
+
+
+
+div#tvlib_gadget_proginfo_extended_attributes_rating{
+overflow:hidden;
+max-width:130px;
+text-indent:220px;
+/* Bigger than maximum width of area */
+background:url(icons/1280_720/stars.png) center left no-repeat;
+float:left;
+
+}
+
+.tvlib_gadget_proginfo_extended_attributes_rating_1 {
+width:10px;
+margin-right:10px;
+}
+
+.tvlib_gadget_proginfo_extended_attributes_rating_2 {
+width:21px;
+margin-right:10px;
+}
+
+.tvlib_gadget_proginfo_extended_attributes_rating_3 {
+ width:33px;
+ margin-right:10px;
+}
+
+.tvlib_gadget_proginfo_extended_attributes_rating_4 {
+ width:45px;
+ margin-right:10px;
+}
+
+.tvlib_gadget_proginfo_extended_attributes_rating_5 {
+ width:56px;
+ margin-right:10px;
+
+}
+
+.tvlib_gadget_proginfo_extended_attributes_rating_6 {
+ width:67px;
+ margin-right:10px;
+}
+
+.tvlib_gadget_proginfo_extended_attributes_rating_7 {
+ width:79px;
+ margin-right:10px;
+}
+
+.tvlib_gadget_proginfo_extended_attributes_rating_8 {
+ width:90px;
+ margin-right:10px;
+}
+
+.tvlib_gadget_proginfo_extended_attributes_rating_9 {
+ width:102px;
+ margin-right:10px;
+}
+
+.tvlib_gadget_proginfo_extended_attributes_rating_10 {
+ width:112px;
+ margin-right:10px;
+}
+
+
+
+
+
+
+
+#episode_session_id{
+		float:left;
+		margin-top:3px;
+		width:228px; 
+		white-space:nowrap;
+		overflow:hidden;
+		
+ }
+div.tvlib_gadget_hintbar_container {
+/*top:628px;*/
+top:635px;
+/*left:148px;*/
+left:120px;
+background-color:#1A3754;
+position:absolute;
+border-radius:25px;
+-moz-border-radius:25px;
+display: none;
+}
+div.tvlib_gadget_hintbar {
+/*width:464px;*/
+/*height:52px;*/
+width:230px;
+height:30px;
+overflow:hidden;
+text-align:left;
+color:#dddddd;
+font-size:26px;
+padding:10px;
+}
+div.tvlib_gadget_hintbar_icon {
+margin-left:5px;
+background-repeat:no-repeat;
+display:inline-block;
+height:37px;
+/*padding-top:15px;*/
+}
+div#tvlib_gadget_hintbar_text {
+/*margin-left:12px;*/
+position:absolute;
+top:8px;
+left:65px;
+display:inline-block;
+}
+
+div#tvlib_gadget_hintbar_icon_KEY_DEVICE_BLUE {
+padding-left:21px;
+/*padding-top:5px;*/
+width:26px;
+height:26px;
+background-image:url(icons/1280_720/key_device_blue.png);
+background-repeat:no-repeat;
+}
+
+
+#vedio{
+/*border: 1px solid #A2C9E4;*/
+height:258px;
+left:703px;
+position:absolute;
+top:110px;
+right: 0%;
+/*width:460px;*/
+width:538px;
+/*border:2px solid navy;*/
+}
+div#pip {
+	 position: absolute;
+	 right: 0%;
+	 margin-top: 0%;
+	 height: 100%;
+	 width: 100%;
+	 font-size: 24px; 
+	color: black; 
+background: url( "img/Pic.png" ) repeat; 
+
+		}
+div#pip_chan_no {
+	 position: absolute;
+	 right: 15px;
+	 top: 15px;
+	 height: 25px;
+	 width: auto;
+	 font-family: arial;
+	 font-size: 16px;
+	 font-weight: normal;
+	 color: #dddddd;
+	 color: black;
+	
+
+}
+.tweetimg {
+		height:60px;
+		width:230px;
+		background: url(/dist/assets/img/tweeet.png) no-repeat;
+		left:45px;
+		position:absolute;
+		top:230px;
+}
+.tweetdesc {
+		height:258px;
+		left:45px;
+		position:absolute;
+		top:5px;
+		width:445px;
+		font-family: arial;
+		color:#87ceeb;
+		color:black;
+		font-size:22px;
+}
+#container {
+ /* width: 300px;
+	height: 50px;*/
+	
+	width: 362px;
+	height: 200px;
+ /*background-color: #567;*/
+	background: black;
+	display: none;
+	position:absolute;
+	left: 70%;
+ /* top: 30%; */
+	top: 25%;
+	margin-left: -50px;
+	margin-top: -50px;
+	align:center;
+	text-align:center; 
+	 vertical-align:middle;
+		 /* background-color:beige;*/
+	border-width: 2px; 
+
+}
+
+/**************************** NEWLY ADDED ************************/
+
+.oneCol {
+	width: 242px;
+}
+
+.twoCols {
+	width: 571px;
+}
+
+.threeCols {
+	width: 794px;
+}

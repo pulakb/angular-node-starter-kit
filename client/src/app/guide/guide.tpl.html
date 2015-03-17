@@ -1,0 +1,39 @@
+<!-- guide.tpl.html -->
+<div id="grid" >
+	<div class='layout_frame1' id ="today" >Today</div>
+	<div class='layout_frame1' ng-repeat = "channel in channelList" id="channel{{$index}}" >
+		{{channel.channelName}}
+	</div>
+</div>
+
+<div id="programList" class='programList'>
+	<div row-header></div>
+	<!-- NEED to check how to replace with Directives -->
+	<div ng-repeat="rowDetails in channelProgramList track by $index" id="row{{$index + 1}}">
+		<div ng-repeat="colDetails in rowDetails.gridProgramData" class="layout_frame odd">
+			<div class="gridtextHolder" style="width: {{colDetails.duration | columWidth:rowDetails.gridProgramDataLength}};">{{colDetails.programName}}</div>
+		</div>
+	</div>
+</div>
+
+<div id="programme_info">
+	<!-- <div program-info></div>	 -->
+	<!-- NEED to check how to replace with Directives -->
+	<div id="tvlib_gadget_proginfo_container" class="tvlib_gadget_proginfo" style="position: absolute; top: 0; left: 0">
+		<div id="tvlib_gadget_proginfo_title">{{programInfoData.title}}</div>
+		<div id="tvlib_gadget_proginfo_time">{{programInfoData.time}}</div>
+		<div id="tvlib_gadget_proginfo_date">{{programInfoData.date}}</div>
+		<div id="tvlib_gadget_proginfo_channel_logo"></div>
+		<div id="tvlib_gadget_proginfo_channel_name">{{programInfoData.channelName}}</div>
+		<div id="tvlib_gadget_proginfo_synopsis">{{programInfoData.synopsis}}</div>
+		<div id="tvlib_gadget_proginfo_synopsis_overlay"></div>
+		<div id="tvlib_gadget_proginfo_attributes">			 
+		</div>
+	</div>	
+</div>
+
+<!-- <div id="container" visibility = 'none'></div>
+<video id="vedio" visibility:'none' width="470" type="video/mp4" ></video> -->
+<div id="tweetimg" class="tweetimg">
+     <div id="tweetdesc" class="tweetdesc">Press Blue Button to Tweet</div>
+</div>

@@ -1,7 +1,8 @@
-var pkg = require('../package.json'),
-	debug = require('debug')(pkg.name + ':main'),
-	app = require('../app');
+var app = require('../app.js'),
+    config = require('../config/config.js');
 
-var server = app.listen(app.get('port'), function () {
-  debug('Express server listening on port ' + server.address().port);	
-})	
+// START THE SERVER
+// =============================================================================
+app.listen(config.server.listenPort);
+
+console.log('Magic happens on port ' + config.server.listenPort);

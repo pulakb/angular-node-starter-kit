@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 var express = require('express');
 var router = express.Router();
@@ -9,16 +9,23 @@ var router = express.Router();
  * to client side
  * */
 
-var roviObj = require('../modules/rovi.js');
+var RoviProvider = require('../modules/rovi.js');
 
  router.get('/', function(req, res) {
-    var x = roviObj.getChannels();
-    res.json(x);
+
  });
 
 router.get('/channels', function(req, res) {
 
-    res.send("channels");
+    // Call getChannels method of rovi Module
+    RoviProvider.getChannels(function (result) {
+        res.json(result);
+    });
+});
+
+// route with parameters (http://localhost:8080/channels/:channelId)
+router.get('/channels/:id', function (req, res) {
+
 });
 
 router.get('/programs', function(req, res) {

@@ -1,0 +1,27 @@
+{
+  "name": "Angular-node-STB-Server",
+  "version": "0.0.1",
+  "description": "Angular Node STB Server",
+  "main": "app.js",
+  "author": "Pulak",
+  "scripts": {
+    "start": "node ./bin/www.js"
+  },
+  "dependencies": {
+    "body-parser": "~1.4.3",
+    "cors": "^2.5.3",
+    "custom-err": "0.0.2",
+    "debug": "~0.7.4",
+    "express": "~4.6.1",
+    "method-override": "~1.0.0",
+<<<<<<< HEAD
+    "mongodb": "^1.4.35",
+=======
+    "mongoose": "^4.0.0",
+>>>>>>> 6a562bdbfae08e2dfed41c3b9312f44334ed97e5
+    "morgan": "~1.1.1",
+    "nconf": "latest",
+    "path": "latest",
+    "request": "~2.16.6"
+  }
+}

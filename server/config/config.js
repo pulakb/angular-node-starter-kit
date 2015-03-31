@@ -8,6 +8,7 @@ module.exports = {
     "mongoHost" : 'localhost',
     "mongoPort"           : 27017,
     "DB"                  : 'CloudDB',
-    "roviCollection"      : "rovi"
+    "roviCollection"      : "rovi",
+    "tribuneCollection"   : "tribune"
   }
 };

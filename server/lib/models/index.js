@@ -9,10 +9,9 @@ var config      = require('../../config/config.js'),
     ObjectID    = require('mongodb').ObjectId,
     mongoHost   = config.server.mongoHost,
     mongoPort   = config.server.mongoPort,
-    DB          = config.server.DB,
-    collectionName = config.server.roviCollection;
+    DB          = config.server.DB;
 
-var RoviModel = function (host, port) {
+var Model = function (host, port) {
 
     var self = this;
 
@@ -30,7 +29,7 @@ var RoviModel = function (host, port) {
     });
 };
 
-RoviModel.prototype.getCollection = function(callback) {
+Model.prototype.getCollection = function(collectionName, callback) {
     this.db.collection(collectionName, function(error, rovi_collection) {
         if( error ) {
             callback(error);
@@ -40,8 +39,8 @@ RoviModel.prototype.getCollection = function(callback) {
     });
 };
 
-RoviModel.prototype.findAll = function (callback) {
-    this.getCollection(function (error, rovi_collection) {
+Model.prototype.findAll = function (collectionName, callback) {
+    this.getCollection(collectionName, function (error, rovi_collection) {
         if (error) {
             callback(error);
         } else {
@@ -56,7 +55,7 @@ RoviModel.prototype.findAll = function (callback) {
     });
 };
 
-RoviModel.prototype.findById = function (id, callback) {
+Model.prototype.findById = function (id, callback) {
   this.getCollection(function (error, rovi_collection) {
       if (error) {
           callback(error);
@@ -73,4 +72,4 @@ RoviModel.prototype.findById = function (id, callback) {
 };
 
 
-module.exports = new RoviModel(mongoHost, mongoPort);
+module.exports = new Model(mongoHost, mongoPort);

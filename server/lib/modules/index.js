@@ -6,25 +6,25 @@
   */
 'use strict';
 
-var RoviModel = require('../models/rovi.js');
+var Model = require('../models/');
 
-function RoviProvider () {}
+function Provider () {}
 
 // Returns the list of channels as a JSON
-RoviProvider.prototype.getChannels = function (callback) {
+Provider.prototype.getChannels = function (collectionName, callback) {
 
     //Call findAll with a callback to RoviProvider in Models
-    RoviModel.findAll(callback);
+    Model.findAll(collectionName, callback);
 };
 
 // Returns a particular channel's details
-RoviProvider.prototype.getChannelById = function (id, callback) {
+Provider.prototype.getChannelById = function (id, callback) {
 
 };
 
 // Returns the program information of a single or all channels
-RoviProvider.prototype.getPrograms = function (channelArr) {
+Provider.prototype.getPrograms = function (channelArr) {
     return "getPrograms";
 };
 
-module.exports = new RoviProvider();
+module.exports = new Provider();

@@ -4,7 +4,7 @@
 var express = require('express'),
 	bodyParser = require('body-parser'),
 	config = require('./config/config.js'),
-    roviRouter = require('./lib/routes/rovi.js'),
+    routes = require('./lib/routes/'),
 	cors = require('cors'),
 	morgan = require('morgan'),
 	Err = require('custom-err'),
@@ -57,6 +57,24 @@ app.use(function(err, req, res, next) {
   });
 });
 
+// Check for Rovi/Tribune User, set collection based on it
+function validate (req, res, next) {
+    /*
+    * Extract the 'user' info from the URL
+    * http://localhost:8080/epg/channels?user=rovi or
+    * http://localhost:8080/epg/channels?user=tribune
+    * */
+    var user = req.query.user;
+
+    if (user == "rovi") {
+        app.set('collectionName', config.server.roviCollection);
+    } else if (user == "tribune") {
+        app.set('collectionName', config.server.tribuneCollection);
+    }
+
+    next();
+}
+
 // Set Routers
 router.get('/', function (req, res) {
     res.send('Hello');
@@ -65,7 +83,7 @@ router.get('/', function (req, res) {
 // Call the router
 app.use('/', router);
 
-// Call the Rovi Router
-app.use('/epg/', roviRouter);
+// Call the Router
+app.use('/epg/', validate, routes);
 
 module.exports = app;

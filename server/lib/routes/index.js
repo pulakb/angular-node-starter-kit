@@ -9,7 +9,7 @@ var router = express.Router();
  * to client side
  * */
 
-var RoviProvider = require('../modules/rovi.js');
+var Provider = require('../modules/');
 
  router.get('/', function(req, res) {
 
@@ -17,8 +17,11 @@ var RoviProvider = require('../modules/rovi.js');
 
 router.get('/channels', function(req, res) {
 
+    // Get the Collection Name set based on User
+    var collectionName = req.app.get('collectionName');
+
     // Call getChannels method of rovi Module
-    RoviProvider.getChannels(function (result) {
+    Provider.getChannels(collectionName, function (result) {
         res.json(result);
     });
 });

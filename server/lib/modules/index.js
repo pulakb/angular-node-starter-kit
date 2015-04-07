@@ -23,8 +23,10 @@ Provider.prototype.getChannelById = function (id, callback) {
 };
 
 // Returns the program information of a single or all channels
-Provider.prototype.getPrograms = function (channelArr) {
-    return "getPrograms";
+Provider.prototype.getPrograms = function (collectionName,  sourceId, userStartTime, userEndTime, callback) {
+
+    //
+    Model.findPrograms(collectionName, sourceId, userStartTime, userEndTime, callback);
 };
 
 module.exports = new Provider();

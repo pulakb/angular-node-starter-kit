@@ -39,12 +39,17 @@ Model.prototype.getCollection = function(collectionName, callback) {
     });
 };
 
+/*
+ Find Channel ID/SourceId
+ URL: http://localhost:8080/epg/channels?user=rovi
+*/
+
 Model.prototype.findAll = function (collectionName, callback) {
     this.getCollection(collectionName, function (error, rovi_collection) {
         if (error) {
             callback(error);
         } else {
-            rovi_collection.find().toArray( function (error, results) {
+            rovi_collection.find({}, {"SourceId": 1, "_id": 0}).toArray( function (error, results) {
                 if (error) {
                     callback(error);
                 } else {
@@ -69,6 +74,42 @@ Model.prototype.findById = function (id, callback) {
           });
       }
   });
+};
+
+/*
+ Find Program of a particular SourceId
+ http://localhost:8080/epg/programs?user=rovi&sourceId=14130&userStartTime=2015-04-06T00:00:00Z&userEndTime=2015-04-06T00:30:00Z
+*/
+
+Model.prototype.findPrograms = function (collectionName, sourceId, userStartTime, userEndTime ,callback) {
+    this.getCollection(collectionName, function (error, rovi_collection) {
+        if (error) {
+            callback(error);
+        } else {
+            rovi_collection.aggregate([
+
+                { "$unwind": "$Programs" },
+                { "$match": {
+                    "SourceId": parseInt(sourceId),
+                    $and: [
+                            {"Programs.AiringTime": {$gte: userStartTime}},
+                            {"Programs.AiringTime": {$lte: userEndTime}},
+                        ]
+                    }
+                }
+            ],function(error,doc) {
+
+                if (error){
+                    console.log(" ERROR");
+                    callback(error)
+                }
+                else {
+                    console.log("Pass");
+                    callback(doc);
+                }
+            });
+        }
+    });
 };
 
 

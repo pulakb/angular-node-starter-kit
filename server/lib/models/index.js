@@ -78,7 +78,7 @@ Model.prototype.findById = function (id, callback) {
 
 /*
  Find Program of a particular SourceId
- http://localhost:8080/epg/programs?user=rovi&sourceId=14130&userStartTime=2015-04-06T00:00:00Z&userEndTime=2015-04-06T00:30:00Z
+ http://localhost:8080/epg/programs?user=rovi&sourceId=16503&userStartTime=2015-04-14T00:00:00Z&userEndTime=2015-04-14T03:30:00Z
 */
 
 Model.prototype.findPrograms = function (collectionName, sourceId, userStartTime, userEndTime ,callback) {
@@ -97,6 +97,7 @@ Model.prototype.findPrograms = function (collectionName, sourceId, userStartTime
                         ]
                     }
                 }
+
             ],function(error,doc) {
 
                 if (error){

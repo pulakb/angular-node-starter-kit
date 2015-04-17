@@ -24,6 +24,7 @@ var buildConfig = require( './build.config.js' );
 // =====
 
 var cssStream,
+    vendorCssStream,
     vendorStream,
     appStream,
     applicationTemplateStream,
@@ -39,6 +40,13 @@ var cssStream,
  * 3. Concat files as 'styles.css'
  */
 gulp.task('minify-css', function() {
+    // Vendor CSS
+    vendorCssStream = gulp.src(buildConfig.vendor_files.css)
+        .pipe(stripCssComments())
+        .pipe(concat('vendor.css'))
+        .pipe(gulp.dest('./dist/css'));
+
+    // User defined styles
     cssStream = gulp.src(buildConfig.app_files.css)
         .pipe(stripCssComments())
         .pipe(concat('styles.css'))
@@ -120,7 +128,7 @@ gulp.task('copy-templates', function() {
 // Inject CSS, JS & Template files in index.html
 gulp.task('inject-files', function () {
     return gulp.src('./src/index.html')
-        .pipe(inject(series(cssStream)))
+        .pipe(inject(series(vendorCssStream, cssStream)))
         .pipe(inject(series(vendorStream, appStream)))
         .pipe(gulp.dest('./dist'));
 });

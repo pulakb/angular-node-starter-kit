@@ -61,15 +61,24 @@ module.exports = {
      * The `vendor_files.assets` property holds any assets to be copied along
      * with our app's assets. This structure is flattened, so it is not
      * recommended that you use wildcards.
+     *
+     * Note: I have removed the specific AnugularJS file inclusion as it is included
+     * from another file
      */
     vendor_files: {
         js: [
             'vendor/bower_components/jquery/dist/jquery.min.js',
             'vendor/bower_components/angular/angular.min.js',
             'vendor/bower_components/angular-resource/angular-resource.min.js',
-            'vendor/bower_components/angular-ui-router/release/angular-ui-router.min.js'
+            'vendor/bower_components/angular-ui-router/release/angular-ui-router.min.js',
+            'vendor/bower_components/ui-router-extras/release/ct-ui-router-extras.min.js',
+            'vendor/bower_components/slick-carousel/slick/slick.js',
+            'vendor/bower_components/angular-slick/dist/slick.js'
         ],
         css: [
+            'vendor/bower_components/bootstrap/dist/css/bootstrap.min.css',
+            'vendor/bower_components/slick-carousel/slick/slick.css',
+            'vendor/bower_components/slick-carousel/slick/slick-theme.css'
         ],
         assets: [
         ]

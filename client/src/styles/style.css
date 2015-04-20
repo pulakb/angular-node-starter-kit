@@ -9,6 +9,10 @@
     padding: 20px 0 20px 0;
 }
 
+.programInfo {
+    background: #fff;
+}
+
 video {
     position: fixed;
     right: 0;

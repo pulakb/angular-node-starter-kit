@@ -39,14 +39,14 @@ cloudStbApp.config(function($stateProvider, $stickyStateProvider, $urlRouterProv
 
     states.push({ name: 'tabs.bychannel.channellist.channel',
         url: '/channel/:cid',
-        controller: '',
+        controller: 'programController',
         templateUrl: 'templates/partials/channel/programCarousel.tpl.html'
     });
 
 
     states.push({ name: 'tabs.bychannel.channellist.channel.programInfo',
         url: '/programInfo/:pid',
-        controller: '',
+        controller: 'programController',
         templateUrl: 'templates/partials/programInfo.tpl.html'
     });
 

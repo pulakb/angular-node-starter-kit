@@ -6,15 +6,12 @@ cloudStbApp.controller('channelController', ['$scope', 'channelData', function (
 
 }]);
 
-cloudStbApp.controller('programController', ['$scope', 'data', '$stateParams', function ($scope, data, $stateParams) {
+cloudStbApp.controller('programController', ['$scope', 'data', '$stateParams', 'programList', function ($scope, data, $stateParams, programList) {
 
     // Access the source id from url
     if ($stateParams.cid) {
         // Pass SourceID/ChannelId to fetch program info for that channel based on start & end time
-        data.getProgramList($stateParams.cid).then (function (response) {
-            $scope.programList = response.data;
-
-        });
+        $scope.programList = programList.data;
     }
 
     // If ProgramId exists then, we can traverse programList to find Program Info for that particular id

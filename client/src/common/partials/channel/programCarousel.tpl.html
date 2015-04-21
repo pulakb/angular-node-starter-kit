@@ -1,6 +1,9 @@
 <!-- Program Carousel -->
-<slick data="programList" lazy-load="ondemand" slides-to-show="3" slides-to-scroll="1" class="slider lazy ng-isolate-scope slick-initialized slick-slider">
-    <div ng-repeat="program in programList track by $index"><a ui-sref=".programInfo({pid: program.Programs['ProgramId']})">{{ program.Programs["Title"] }}</a></div>
-</slick>
+<section id="section2">
+    <slick data="programList" class="slider single-item" current-index="index" responsive="breakpoints" slides-to-show=10 slides-to-scroll=10 id="programCarousel">
+        <div class="innerCarouselDiv" ng-repeat="program in programList track by $index"><a ui-sref=".programInfo({pid: program.Programs['ProgramId']})">{{ program.Programs["Title"] }}</a></div>
+    </slick>
+</section>
+
 
 <div ui-view></div>

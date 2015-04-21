@@ -42,6 +42,10 @@ cloudStbApp.factory('dateTime', [ function () {
     }
   }
 
+  function UTCLocalTimeConversion () {
+
+  }
+
   function getCustomStartEndTime (proDuration, proDate) {
     var startDate =null,
         endDate = null,

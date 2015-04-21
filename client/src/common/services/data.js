@@ -23,7 +23,16 @@ cloudStbApp.factory('data', [ '$http', '$q', function ($http, $q) {
   // Fetches Program Data for a particular channel based on start and end time
   function getProgramList(sourceID) {
       /*
-      * Hard coding for now but userStartTime and userEndTime will be variable
+      * Hard coding for now but userStartTime and userEndTime will be variable in local time zone
+      *
+      * var dt = new Date();
+      * var utcUserStartTime = dt.toISOString();
+      *
+      * var endTime = new Date();
+      * endTime.setHours(23, 59, 59, 999);
+      * var utcUserEndTime = endTime.toISOString();
+      *
+      * console.log(utcUserEndTime.toISOString());
       * */
 
       var userStartTime = '2015-04-14T00:00:00Z',

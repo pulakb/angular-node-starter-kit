@@ -42,8 +42,23 @@ cloudStbApp.factory('dateTime', [ function () {
     }
   }
 
+  /*
+  * Function returns start and end time in UTC format
+  * */
   function UTCLocalTimeConversion () {
+    //Take current Local time & convert it into UTC format
+      var dt = new Date(),
+          utcUserStartTime = dt.toISOString();
 
+      var endTime = new Date();
+      endTime.setHours(23, 59, 59, 999);
+
+      var utcUserEndTime = endTime.toISOString();
+
+      return {
+          "userStarTime" : utcUserStartTime,
+          "userEndTime" : utcUserEndTime
+      }
   }
 
   function getCustomStartEndTime (proDuration, proDate) {
@@ -85,7 +100,8 @@ function getCustomDate (proDate) {
   getGridEndTime: getGridEndTime,
   startEndTimeInMilli: startEndTimeInMilli,
   getCustomStartEndTime: getCustomStartEndTime,
-  getCustomDate: getCustomDate
+  getCustomDate: getCustomDate,
+  UTCLocalTimeConversion: UTCLocalTimeConversion
  }
 
 }]);

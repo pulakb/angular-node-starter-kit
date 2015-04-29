@@ -3,6 +3,7 @@
 // Call the packages and define app using express
 var express = require('express'),
 	bodyParser = require('body-parser'),
+    serveStatic = require('serve-static'),
 	config = require('./config/config.js'),
     routes = require('./lib/routes/'),
     socialRoutes = require('./lib/routes/tweet.js'),
@@ -17,6 +18,7 @@ var express = require('express'),
     router = express.Router(),
     methodOverride = require('method-override'),
 	app = express();
+
 
 /*
 * Tweeter related codes should be moved to related files
@@ -43,6 +45,8 @@ app.use(morgan('dev'));
 
 // Cross-origin
 app.use(cors());
+
+// Serving Static files - images, channel logo
 
 // Set server port
 app.set('port', process.env.PORT || 8080);

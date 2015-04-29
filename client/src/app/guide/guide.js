@@ -1,12 +1,14 @@
-cloudStbApp.controller('channelController', ['$scope', 'channelData', function ($scope, channelData) {
+cloudStbApp.controller('channelController', ['$scope', 'channelData', 'VideoPlayer', function ($scope, channelData, VideoPlayer) {
 
     // Service IDs i.e. channel Ids
     var channelList = channelData.data;
     $scope.channelList = channelList;
 
+    //VideoPlayer.play("http://192.168.0.50:8080/vldms/tuner?ocap_locator=ocap://0x26");
+
 }]);
 
-cloudStbApp.controller('programController', ['$scope', 'data', '$stateParams', 'programList', function ($scope, data, $stateParams, programList) {
+cloudStbApp.controller('programController', ['$scope', 'data', '$stateParams', 'programList', 'VideoPlayer', function ($scope, data, $stateParams, programList, VideoPlayer) {
 
     // Access the source id from url
     if ($stateParams.cid) {
@@ -17,6 +19,13 @@ cloudStbApp.controller('programController', ['$scope', 'data', '$stateParams', '
     // If ProgramId exists then, we can traverse programList to find Program Info for that particular id
     if ($stateParams.pid) {
         var _programList =  $scope.programList;
+
+        /*
+        * Following Code block will be removed later. Here we are hard coding program ID patterns with
+        * Video URLs.
+        * */
+
+        VideoPlayer.play("http://192.168.0.50:8080/vldms/tuner?ocap_locator=ocap://0x27");
 
         var _programInfo = {};
 

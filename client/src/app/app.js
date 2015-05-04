@@ -8,7 +8,12 @@ cloudStbApp.config(function($stateProvider, $stickyStateProvider, $urlRouterProv
     states.push({   name: 'tabs',
         url: '/',
         views: {
-        '@':   { templateUrl: 'templates/partials/tabs.tpl.html' }
+        '@':   { templateUrl: 'templates/partials/tabs.tpl.html',
+                 controller: function () {
+                     //Setting focus to 'View By Channel' Tab on page display
+                     $('#byChannel').focus();
+                 }
+                }
         }
     });
 
@@ -95,7 +100,16 @@ cloudStbApp.config(function($stateProvider, $stickyStateProvider, $urlRouterProv
     });*/
 });
 
-cloudStbApp.run(function ($rootScope, $state, $window, $timeout) {
+cloudStbApp.run(function ($rootScope, $state, $window, $timeout, EventManagerService, KeyHandlerService) {
     $rootScope.$state = $state;
     $rootScope.$on("$stateChangeSuccess", function() {});
+
+    //Initialize the Keyboard Service
+    EventManagerService.init();
+
+    EventManagerService.on(function (key, evt) {
+        KeyHandlerService.move(key, evt);
+    });
+
+
 });

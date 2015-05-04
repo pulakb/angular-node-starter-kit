@@ -4,6 +4,8 @@ cloudStbApp.controller('channelController', ['$scope', 'channelData', 'VideoPlay
     var channelList = channelData.data;
     $scope.channelList = channelList;
 
+    console.log($scope.channelList);
+
     //VideoPlayer.play("http://192.168.0.50:8080/vldms/tuner?ocap_locator=ocap://0x26");
 
 }]);

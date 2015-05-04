@@ -1,7 +1,7 @@
 <div class="navbar navbar-default navbar-static-top" role="navigation">
     <ul class="nav navbar-nav">
-        <li ng-class="{active: $state.includes('tabs.bychannel')}" ><a ui-sref="tabs.bychannel.channellist">View By Channel</a></li>
-        <li ng-class="{active: $state.includes('tabs.bytime')}" ><a ui-sref="tabs.bytime">View By Time</a></li>
+        <li ng-class="{active: $state.includes('tabs.bychannel')}" ><a ui-sref="tabs.bychannel.channellist" tabindex="1" id="byChannel">View By Channel</a></li>
+        <li ng-class="{active: $state.includes('tabs.bytime')}" ><a ui-sref="tabs.bytime" tabindex="2">View By Time</a></li>
     </ul>
 </div>
 <div class="tabcontent" ui-view="channeltab" ng-show="$state.includes('tabs.bychannel')"></div>

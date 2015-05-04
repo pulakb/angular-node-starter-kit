@@ -1,7 +1,7 @@
 <!-- Program Carousel -->
 <section id="section2">
-    <slick data="programList" class="slider single-item" current-index="index" responsive="breakpoints" slides-to-show=10 slides-to-scroll=10 id="programCarousel">
-        <div class="innerCarouselDiv" ng-repeat="program in programList track by $index"><a ui-sref=".programInfo({pid: program.Programs['ProgramId']})">{{ program.Programs["Title"] }}</a></div>
+    <slick data="programList" class="slider single-item" current-index="index" responsive="breakpoints" slides-to-show=10 slides-to-scroll=10 id="programCarousel" tabindex="4">
+        <div class="innerCarouselDiv" ng-repeat="program in programList track by $index"><a ui-sref=".programInfo({pid: program.Programs['ProgramId']})" class="programCarousel">{{ program.Programs["Title"] }}</a></div>
     </slick>
 </section>
 

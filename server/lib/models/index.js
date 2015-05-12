@@ -49,7 +49,7 @@ Model.prototype.findAll = function (collectionName, callback) {
         if (error) {
             callback(error);
         } else {
-            rovi_collection.find({}, {"SourceId": 1, "_id": 0}).toArray( function (error, results) {
+            rovi_collection.find({}, {"SourceId": 1,"channelImage": 1, "_id": 0}).toArray( function (error, results) {
                 if (error) {
                     callback(error);
                 } else {

@@ -7,7 +7,7 @@ module.exports = {
     "distFolder": path.resolve(__dirname, '../../client/dist'),  // The folder that contains the application files (note that the files are in a different repository) - relative to this file
     "mongoHost" : 'localhost',
     "mongoPort"           : 27017,
-    "DB"                  : 'CloudDB',
+    "DB"                  : 'CloudDB-WyPlay',
     "roviCollection"      : "rovi",
     "tribuneCollection"   : "tribune"
   },

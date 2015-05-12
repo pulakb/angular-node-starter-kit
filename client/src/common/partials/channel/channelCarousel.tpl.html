@@ -1,9 +1,9 @@
 <section id="section1">
-    <slick class="slider lazy" current-index="index" responsive="breakpoints" data="channelList" lazy-load='ondemand' slides-to-show=7 slides-to-scroll=3 id="channelCarousel" tabindex="4">
-        <div ng-repeat="channel in channelList track by $index"><a ui-sref=".channel({cid: channel.SourceId})" class="channelCarousel">{{ channel.SourceId }}</a></div>
-        <!--<div ng-repeat="channel in channelList track by $index"><a ui-sref=".channel({cid: channel.SourceId})"><img width="92" height="36" ng-src="{{channel.channelImage['channelImage']}}" /> </a></div>-->
-    </slick>
-
+    <div slick-slider="{dots: false, arrows: false, draggable: false, slidesToShow:5, infinite:false}">
+        <div class="my-slide" ng-repeat="channel in channelList track by $index">
+            <a ui-sref=".channel({cid: channel.SourceId})" class="channelCarousel"><img width="140" height="140" ng-src="{{channel.channelImage}}" /></a>
+        </div>
+    </div>
 </section>
 
 <div ui-view></div>

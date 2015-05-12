@@ -1,5 +1,5 @@
 // File Name: app.js
-var cloudStbApp = angular.module('cloudStbApp', ['ui.router', 'ct.ui.router.extras', 'slick']);
+var cloudStbApp = angular.module('cloudStbApp', ['ui.router', 'ct.ui.router.extras']);
 
 cloudStbApp.config(function($stateProvider, $stickyStateProvider, $urlRouterProvider) {
     $stickyStateProvider.enableDebug(true);
@@ -10,8 +10,18 @@ cloudStbApp.config(function($stateProvider, $stickyStateProvider, $urlRouterProv
         views: {
         '@':   { templateUrl: 'templates/partials/tabs.tpl.html',
                  controller: function () {
+
+                     settings_manager.getLastLcn(function(lcn) {
+                         log.error('First Play');
+                         getLcn(lcn);
+                     });
+
                      //Setting focus to 'View By Channel' Tab on page display
                      $('#byChannel').focus();
+
+
+                     // Play a video initially
+                    // VideoPlayer.play("http://192.168.0.50:8080/vldms/tuner?ocap_locator=ocap://0x26");
                  }
                 }
         }
@@ -105,11 +115,9 @@ cloudStbApp.run(function ($rootScope, $state, $window, $timeout, EventManagerSer
     $rootScope.$on("$stateChangeSuccess", function() {});
 
     //Initialize the Keyboard Service
-    EventManagerService.init();
+   /* EventManagerService.init();
 
     EventManagerService.on(function (key, evt) {
         KeyHandlerService.move(key, evt);
-    });
-
-
+    });*/
 });

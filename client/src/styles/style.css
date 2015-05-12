@@ -1,12 +1,21 @@
 /* Overriding */
+body {
+    background-color: transparent !important;
+}
+
 .navbar-default {
     opacity: .7;
 }
 
 .slick-slider {
-    background: #fff;
-    opacity: .7;
-    padding: 20px 0 20px 0;
+    padding: 10px 0 10px 20px;
+}
+
+
+.slick-slider a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
 }
 
 .programInfo {
@@ -63,14 +72,14 @@ video {
 #section1 {
     background-color: #168ccc;
     color: #dedeff;
-    padding: 5px 0;
+    /*padding: 5px 0;*/
     border-radius: 4px;
 }
 
 #section2 {
     background-color: #5F5F5F;
     color: #686868;
-    padding: 5px 0;
+/*    padding: 5px 0;*/
     border-radius: 4px;
     margin-top: 4px;
 }

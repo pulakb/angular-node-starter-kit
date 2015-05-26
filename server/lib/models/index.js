@@ -30,26 +30,25 @@ var Model = function (host, port) {
 };
 
 Model.prototype.getCollection = function(collectionName, callback) {
-    this.db.collection(collectionName, function(error, rovi_collection) {
+    this.db.collection(collectionName, function(error, collection) {
         if( error ) {
             callback(error);
         } else {
-            callback(null, rovi_collection);
+            callback(null, collection);
         }
     });
 };
 
 /*
- Find Channel ID/SourceId
- URL: http://localhost:8080/epg/channels?user=rovi
+
 */
 
 Model.prototype.findAll = function (collectionName, callback) {
-    this.getCollection(collectionName, function (error, rovi_collection) {
+    this.getCollection(collectionName, function (error, collection) {
         if (error) {
             callback(error);
         } else {
-            rovi_collection.find({}, {"SourceId": 1,"channelImage": 1, "_id": 0}).toArray( function (error, results) {
+            collection.find({}, {}).toArray( function (error, results) {
                 if (error) {
                     callback(error);
                 } else {
@@ -61,11 +60,11 @@ Model.prototype.findAll = function (collectionName, callback) {
 };
 
 Model.prototype.findById = function (id, callback) {
-  this.getCollection(function (error, rovi_collection) {
+  this.getCollection(function (error, collection) {
       if (error) {
           callback(error);
       } else {
-          rovi_collection.findOne({_id: rovi_collection.db.bson_serializer.ObjectID.createFromHexString(id)}, function (error, result) {
+          collection.findOne({_id: collection.db.bson_serializer.ObjectID.createFromHexString(id)}, function (error, result) {
             if (error) {
                 callback(error);
             } else {
@@ -75,43 +74,5 @@ Model.prototype.findById = function (id, callback) {
       }
   });
 };
-
-/*
- Find Program of a particular SourceId
- http://localhost:8080/epg/programs?user=rovi&sourceId=16503&userStartTime=2015-04-14T00:00:00Z&userEndTime=2015-04-14T03:30:00Z
-*/
-
-Model.prototype.findPrograms = function (collectionName, sourceId, userStartTime, userEndTime ,callback) {
-    this.getCollection(collectionName, function (error, rovi_collection) {
-        if (error) {
-            callback(error);
-        } else {
-            rovi_collection.aggregate([
-
-                { "$unwind": "$Programs" },
-                { "$match": {
-                    "SourceId": parseInt(sourceId),
-                    $and: [
-                            {"Programs.AiringTime": {$gte: userStartTime}},
-                            {"Programs.AiringTime": {$lte: userEndTime}},
-                        ]
-                    }
-                }
-
-            ],function(error,doc) {
-
-                if (error){
-                    console.log(" ERROR");
-                    callback(error)
-                }
-                else {
-                    console.log("Pass");
-                    callback(doc);
-                }
-            });
-        }
-    });
-};
-
 
 module.exports = new Model(mongoHost, mongoPort);

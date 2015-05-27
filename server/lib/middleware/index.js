@@ -1,7 +1,7 @@
 /**
- * Helpers which are used in middleware
+ * Login Helpers which are used in Passport Strategy
  */
 
-function Helper () {}
+function LoginHelper () {}
 
-module.exports = new Helper();
+module.exports = new LoginHelper();

@@ -3,10 +3,7 @@
 var express = require('express');
 var router = express.Router();
 
-/* Make a call to rovi class which functions to interact with Rovi Model
- * to get the data.
- * Once data is returned from the rovi class's function, send that data
- * to client side
+/*
  * */
 
 var Provider = require('../modules/');
@@ -15,17 +12,22 @@ var Provider = require('../modules/');
 
  });
 
-// route without parameters (http://localhost:8080/epg/channels/)
-router.get('/signUp', function(req, res) {
+// route
+router.post('/signUp', function(req, res) {
 
 });
 
-// route with parameters (http://localhost:8080/epg/channels/:channelId)
+//User will log in using email and password. So during registration email can't be duplicated.
+router.post('/signUp/check/email', function(req, res) {
+
+});
+
+// route
 router.get('/signOut', function (req, res) {
 
 });
 
-// route for programs (http://localhost:8080/epg/programs)
+// route
 router.get('/signIn', function(req, res) {
 
 

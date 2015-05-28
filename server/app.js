@@ -2,20 +2,20 @@
 
 // Call the packages and define app using express
 var express = require('express'),
-	  bodyParser = require('body-parser'),
+	bodyParser = require('body-parser'),
     serveStatic = require('serve-static'),
-	  config = require('./config/config.js'),
+	config = require('./config/config.js'),
     routes = require('./lib/routes/'),
     socialRoutes = require('./lib/routes/tweet.js'),
     mongoose = require('mongoose'),
-	  cors = require('cors'),
-	  morgan = require('morgan'),
-	  Err = require('custom-err'),
+	cors = require('cors'),
+	morgan = require('morgan'),
+	Err = require('custom-err'),
     path = require('path'),
     debug = require('debug'),
     router = express.Router(),
     methodOverride = require('method-override'),
-	  app = express();
+	app = express();
 
 // Parse application/json
 app.use(bodyParser.json());

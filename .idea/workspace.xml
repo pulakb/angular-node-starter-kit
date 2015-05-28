@@ -2,45 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5102e972-7b47-4fc9-8568-159c08f91b72" name="Default" comment="jQuery library and gulp-html2js added">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/common/services/authentication.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/module-1/module1Controller.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/module-2/module2Controller.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/fsv/fsv.tpl.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/fsv/fsvController.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/guide/columWidthFilter.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/guide/gridService.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/guide/guide.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/guide/guide.tpl.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/guide/guideManager.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/guide/guide_OLD.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/guide/rowHeader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/guide/tileModel.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/common/directives/rowHeader.tpl.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/common/directives/slickSlider.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/common/partials/channel/channel.tpl.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/common/partials/channel/channelCarousel.tpl.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/common/partials/channel/programCarousel.tpl.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/common/partials/tabs.tpl.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/common/partials/time/timeCarousel.tpl.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/common/services/EventManager.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/common/services/FrogPlayer.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/common/services/KeyHandler.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/common/services/VideoPlayer.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/common/services/generateUniqueId.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/common/services/keyboard.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/styles/ajax-loader.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/styles/slick.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/styles/slick.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/styles/slick.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/styles/slick.woff" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/app/app.js" afterPath="$PROJECT_DIR$/client/src/app/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/build.config.js" afterPath="$PROJECT_DIR$/client/build.config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/common/services/data.js" afterPath="$PROJECT_DIR$/client/src/common/services/data.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/common/services/datetime.js" afterPath="$PROJECT_DIR$/client/src/common/services/datetime.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/index.html" afterPath="$PROJECT_DIR$/client/src/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/common/partials/programInfo.tpl.html" afterPath="$PROJECT_DIR$/client/src/common/partials/programInfo.tpl.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/styles/style.css" afterPath="$PROJECT_DIR$/client/src/styles/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/app.js" afterPath="$PROJECT_DIR$/server/app.js" />
     </list>
     <ignored path="angular-node-starter-kit.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -65,10 +27,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/client/src/app/app.js">
+        <entry file="file://$PROJECT_DIR$/server/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.039577838" vertical-offset="0" max-vertical-offset="1260">
-              <caret line="2" column="62" selection-start-line="2" selection-start-column="62" selection-end-line="2" selection-end-column="62" />
+            <state vertical-scroll-proportion="0.39577836" vertical-offset="0" max-vertical-offset="1215">
+              <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -87,7 +49,6 @@
         <option value="$PROJECT_DIR$/client/gulpFile.js" />
         <option value="$PROJECT_DIR$/server/server.js" />
         <option value="$PROJECT_DIR$/server/config/config.js" />
-        <option value="$PROJECT_DIR$/server/app.js" />
         <option value="$PROJECT_DIR$/server/lib/routes/index.js" />
         <option value="$PROJECT_DIR$/server/lib/middleware/FieldsValidator.js" />
         <option value="$PROJECT_DIR$/client/build.config.js" />
@@ -100,6 +61,7 @@
         <option value="$PROJECT_DIR$/client/src/app/app.js" />
         <option value="$PROJECT_DIR$/client/src/app/module-1/module1Controller.js" />
         <option value="$PROJECT_DIR$/client/src/app/module-2/module2Controller.js" />
+        <option value="$PROJECT_DIR$/server/app.js" />
       </list>
     </option>
   </component>
@@ -163,47 +125,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="angular-node-starter-kit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="angular-node-starter-kit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="angular-node-starter-kit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="angular-node-starter-kit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
+              <option name="myItemId" value="server" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -383,7 +305,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="195">
           <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -425,7 +347,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="195">
           <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -585,14 +507,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="457" max-vertical-offset="1215">
-          <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/lib/middleware/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.118421055" vertical-offset="0" max-vertical-offset="760">
@@ -606,7 +520,7 @@
         <state vertical-scroll-proportion="0.13815789" vertical-offset="0" max-vertical-offset="760">
           <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -750,7 +664,15 @@
     <entry file="file://$PROJECT_DIR$/client/src/app/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.039577838" vertical-offset="0" max-vertical-offset="1260">
-          <caret line="2" column="62" selection-start-line="2" selection-start-column="62" selection-end-line="2" selection-end-column="62" />
+          <caret line="2" column="15" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39577836" vertical-offset="0" max-vertical-offset="1215">
+          <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
           <folding />
         </state>
       </provider>

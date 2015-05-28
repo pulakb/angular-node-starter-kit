@@ -3,7 +3,7 @@
 /*
 * @Description: Document all your HTTP Calls here.
 * */
-cloudStbApp.factory('data', [ '$http', '$q', function ($http, $q) {
+angApp.factory('data', [ '$http', '$q', function ($http, $q) {
 
   //Makes a single HTTP Request
   function functionName1 () {

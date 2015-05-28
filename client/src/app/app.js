@@ -4,23 +4,24 @@
 *
 * */
 
-var cloudStbApp = angular.module('cloudStbApp', ['ui.router', 'ct.ui.router.extras']);
+var angApp = angular.module('angApp', ['ui.router']);
 
-cloudStbApp.config(function($stateProvider, $stickyStateProvider, $urlRouterProvider) {
-    $stickyStateProvider.enableDebug(true);
+angApp.config(function($stateProvider, $urlRouterProvider) {
 
     var states = [];
-    states.push({   name: 'tabs',
+
+    states.push({   name: 'header',
         url: '/',
+
         views: {
-        '@':   { templateUrl: '',
+        '@':   { templateUrl: 'templates/partials/header.tpl.html',
                  controller: function () {}
                }
         }
     });
 
     // tab
-    states.push({   name: 'tabs.',
+    states.push({   name: 'header.home',
         url: '',
         views: { 'viewName':
                     { templateUrl: ''}
@@ -31,7 +32,7 @@ cloudStbApp.config(function($stateProvider, $stickyStateProvider, $urlRouterProv
         sticky: true
     });
 
-    states.push({ name: 'tabs.',
+    states.push({ name: 'header.signup',
         url: '',
         templateUrl: '',
         controller: '',
@@ -39,7 +40,7 @@ cloudStbApp.config(function($stateProvider, $stickyStateProvider, $urlRouterProv
         }
     });
 
-    states.push({ name: 'tabs.',
+    states.push({ name: 'header.signout',
         url: '',
         controller: '',
         resolve:{
@@ -48,23 +49,19 @@ cloudStbApp.config(function($stateProvider, $stickyStateProvider, $urlRouterProv
         templateUrl: ''
     });
 
-    states.push({ name: 'tabs.',
+    states.push({ name: 'header.signin',
         url: '',
         controller: '',
         templateUrl: ''
     });
 
-    states.push({   name: 'tabs.',
+    states.push({   name: 'header.services',
         url: '',
         views: { '':
-        { templateUrl: ''}
+            { templateUrl: ''}
         },
-        resolve: { foo: function() {
-            console.log("resolving 'foo' for tabs.");
-            return "foo"; }
-        },
-        deepStateRedirect: true,
-        sticky: true
+        resolve: {
+        }
     });
 
     angular.forEach(states, function(state) { $stateProvider.state(state); });
@@ -73,7 +70,7 @@ cloudStbApp.config(function($stateProvider, $stickyStateProvider, $urlRouterProv
 
 });
 
-cloudStbApp.run(function ($rootScope, $state, $window, $timeout, EventManagerService, KeyHandlerService) {
+cloudStbApp.run(function ($rootScope, $state) {
     $rootScope.$state = $state;
     $rootScope.$on("$stateChangeSuccess", function() {});
 });

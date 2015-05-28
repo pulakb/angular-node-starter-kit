@@ -3,7 +3,7 @@
 /*
  * @Description: Document all your date time functions.
  * */
-cloudStbApp.factory('dateTime', [ function () {
+angApp.factory('dateTime', [ function () {
 
 function functionName (inputDate) {
     var d=new Date(inputDate),

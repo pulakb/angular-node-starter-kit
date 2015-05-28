@@ -1,9 +1,0 @@
-<section id="section1">
-    <div slick-slider="{dots: false, arrows: false, draggable: false, slidesToShow:5, infinite:false}">
-        <div class="my-slide" ng-repeat="channel in channelList track by $index">
-            <a ui-sref=".channel({cid: channel.SourceId})" class="channelCarousel"><img width="140" height="140" ng-src="{{channel.channelImage}}" /></a>
-        </div>
-    </div>
-</section>
-
-<div ui-view></div>

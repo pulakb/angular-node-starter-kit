@@ -1,17 +1,22 @@
+'use strict';
+
+/*
+* @Description: Document all your HTTP Calls here.
+* */
 cloudStbApp.factory('data', [ '$http', '$q', function ($http, $q) {
 
-  // Following function gives all channels
-  function getChannelList () {
+  //Makes a single HTTP Request
+  function functionName1 () {
     // $http returns a promise for the url data
-    return $http({method: 'GET', url: 'http://192.168.0.99:8080/epg/channels?user=rovi'});
+    return $http({method: 'GET', url: ''});
   }
 
-  // Following function gives program info for every channel
-  function getProgramInfo (urlList) {
+  //Makes multiple HTTP Requests
+  function functionName2 (parameters) {
     var deferred = $q.defer();
 
     // Fire all http calls
-    $q.all(urlList.map(function (_url) {
+    $q.all(parameters.map(function (_url) {
       return $http({method: 'GET', url: _url});
     })).then(function (results) {   
       deferred.resolve(results);
@@ -20,36 +25,9 @@ cloudStbApp.factory('data', [ '$http', '$q', function ($http, $q) {
     return deferred.promise;
   }
 
-  // Fetches Program Data for a particular channel based on start and end time
-  function getProgramList(sourceID) {
-      /*
-      * Hard coding for now but userStartTime and userEndTime will be variable in local time zone
-      *
-      * var dt = new Date();
-      * var utcUserStartTime = dt.toISOString();
-      *
-      * var endTime = new Date();
-      * endTime.setHours(23, 59, 59, 999);
-      * var utcUserEndTime = endTime.toISOString();
-      *
-      * console.log(utcUserEndTime.toISOString());
-      * */
-
-      //var startEndTime = datetime.UTCLocalTimeConversion();
-
-      // Replace hard coded value with the properties in 'startEndTime' object
-      var userStartTime = '2015-05-11T12:00:00Z',
-          userEndTime = '2015-05-11T12:00:00Z';
-
-      var _url = 'http://192.168.0.99:8080/epg/programs?user=rovi&sourceId=' + sourceID + '&userStartTime=' + userStartTime + '&userEndTime=' + userEndTime;
-
-      return $http({method: 'GET', url: _url});
-  }
-
   return {
-    getChannelList: getChannelList,
-    getProgramList: getProgramList,
-    getProgramInfo: getProgramInfo
+    functionName1: functionName1,
+    functionName2: functionName2
   }
 
 }]);

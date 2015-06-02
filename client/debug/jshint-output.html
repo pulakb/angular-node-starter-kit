@@ -16,220 +16,420 @@
             <th>Evidence</th>
             <th>Reason</th>
         </tr>
-        <tr><td colspan="5"><b>/home/user/Pulak/LnT_Projects/angular-node-STB/client/src/app/guide/guide_OLD.js</b></td></tr><tr class="warning">
-    <td class="text-center">W069</td>
-    <td class="text-center">3</td>
-    <td class="text-center">40</td>
-    <td><code>  var channelList = channelData.data[0][&#039;guideResponseDTO&#039;];</code></td>
-    <td>[&#039;guideResponseDTO&#039;] is better written in dot notation.</td>
+        <tr><td colspan="5"><b>/home/user/Pulak/Projects/angular-node-starter-kit/client/src/app/app.js</b></td></tr><tr class="warning">
+    <td class="text-center">W097</td>
+    <td class="text-center">1</td>
+    <td class="text-center">1</td>
+    <td><code>&#039;use strict&#039;;</code></td>
+    <td>Use the function form of &quot;use strict&quot;.</td>
 </tr><tr class="warning">
-    <td class="text-center">W069</td>
-    <td class="text-center">19</td>
-    <td class="text-center">120</td>
-    <td><code>    	var _url = &#039;http://10.78.150.61:3000/March13/epgService/programLists?channelId=&#039; + channelList.channelsArray[i][&#039;channelId&#039;];</code></td>
-    <td>[&#039;channelId&#039;] is better written in dot notation.</td>
+    <td class="text-center">W117</td>
+    <td class="text-center">7</td>
+    <td class="text-center">14</td>
+    <td><code>var angApp = angular.module(&#039;angApp&#039;, [&#039;ui.router&#039;]);</code></td>
+    <td>&#039;angular&#039; is not defined.</td>
 </tr><tr class="warning">
-    <td class="text-center">W069</td>
-    <td class="text-center">47</td>
-    <td class="text-center">56</td>
-    <td><code>				channelId: channelList.channelsArray[i][&#039;channelId&#039;],</code></td>
-    <td>[&#039;channelId&#039;] is better written in dot notation.</td>
-</tr><tr class="warning">
-    <td class="text-center">W069</td>
-    <td class="text-center">48</td>
-    <td class="text-center">58</td>
-    <td><code>				channelName: channelList.channelsArray[i][&#039;channelName&#039;],</code></td>
-    <td>[&#039;channelName&#039;] is better written in dot notation.</td>
-</tr><tr class="warning">
-    <td class="text-center">W069</td>
-    <td class="text-center">49</td>
-    <td class="text-center">60</td>
-    <td><code>				channelNumber: channelList.channelsArray[i][&#039;channelNumber&#039;],</code></td>
-    <td>[&#039;channelNumber&#039;] is better written in dot notation.</td>
-</tr><tr class="warning">
-    <td class="text-center">W009</td>
-    <td class="text-center">87</td>
-    <td class="text-center">68</td>
-    <td><code>			_oneScreenGridData[singleShannel.channelId] = new Array();</code></td>
-    <td>The array literal notation [] is preferable.</td>
-</tr><tr class="warning">
-    <td class="text-center">W014</td>
-    <td class="text-center">116</td>
-    <td class="text-center">21</td>
-    <td><code>					&amp;&amp; programEndTime &lt;= _gridEndTime) {</code></td>
-    <td>Bad line breaking before &#039;&amp;&amp;&#039;.</td>
-</tr><tr class="warning">
-    <td class="text-center">W004</td>
-    <td class="text-center">119</td>
-    <td class="text-center">38</td>
-    <td><code>					var timeDuration = (programEndTime - _gridStartTime)/60000;</code></td>
-    <td>&#039;timeDuration&#039; is already defined.</td>
-</tr><tr class="warning">
-    <td class="text-center">W004</td>
-    <td class="text-center">120</td>
-    <td class="text-center">50</td>
-    <td><code>					var durationAfterGridEndTime = (_gridStartTime - programStartTime)/60000;</code></td>
-    <td>&#039;durationAfterGridEndTime&#039; is already defined.</td>
-</tr><tr class="warning">
-    <td class="text-center">W004</td>
-    <td class="text-center">129</td>
-    <td class="text-center">38</td>
-    <td><code>					var timeDuration = 90;</code></td>
-    <td>&#039;timeDuration&#039; is already defined.</td>
-</tr><tr class="warning">
-    <td class="text-center">W004</td>
-    <td class="text-center">131</td>
-    <td class="text-center">50</td>
-    <td><code>					var durationAfterGridEndTime = (programEndTime - _gridEndTime) / 60000;</code></td>
-    <td>&#039;durationAfterGridEndTime&#039; is already defined.</td>
-</tr><tr class="warning">
-    <td class="text-center">W033</td>
-    <td class="text-center">167</td>
-    <td class="text-center">18</td>
-    <td><code>				}</code></td>
-    <td>Missing semicolon.</td>
-</tr><tr class="warning">
-    <td class="text-center">W069</td>
-    <td class="text-center">204</td>
-    <td class="text-center">61</td>
-    <td><code>			&quot;title&quot;: singleChannelProgram.gridProgramData[0][&quot;programName&quot;],</code></td>
-    <td>[&#039;programName&#039;] is better written in dot notation.</td>
-</tr><tr class="warning">
-    <td class="text-center">W069</td>
-    <td class="text-center">205</td>
-    <td class="text-center">64</td>
-    <td><code>			&quot;synopsis&quot;: singleChannelProgram.gridProgramData[0][&quot;description&quot;], </code></td>
-    <td>[&#039;description&#039;] is better written in dot notation.</td>
-</tr><tr class="warning">
-    <td class="text-center">W069</td>
-    <td class="text-center">206</td>
-    <td class="text-center">92</td>
-    <td><code>			&quot;time&quot;: dateTime.getCustomStartEndTime (singleChannelProgram.gridProgramData[0][&quot;duration&quot;], singleChannelProgram.gridProgramData[0][&quot;userStartTime&quot;]),</code></td>
-    <td>[&#039;duration&#039;] is better written in dot notation.</td>
-</tr><tr class="warning">
-    <td class="text-center">W069</td>
-    <td class="text-center">206</td>
-    <td class="text-center">145</td>
-    <td><code>			&quot;time&quot;: dateTime.getCustomStartEndTime (singleChannelProgram.gridProgramData[0][&quot;duration&quot;], singleChannelProgram.gridProgramData[0][&quot;userStartTime&quot;]),</code></td>
-    <td>[&#039;userStartTime&#039;] is better written in dot notation.</td>
-</tr><tr class="warning">
-    <td class="text-center">W069</td>
-    <td class="text-center">207</td>
-    <td class="text-center">83</td>
-    <td><code>			&quot;date&quot;: dateTime.getCustomDate(singleChannelProgram.gridProgramData[0][&quot;userStartTime&quot;]),</code></td>
-    <td>[&#039;userStartTime&#039;] is better written in dot notation.</td>
-</tr>
-    </table>
-    <div class="well">
-    Found <span class="label label-default">17</span> failures - <span class="label label-danger">0 errors</span> &amp; <span class="label label-warning">17 warnings</span>
-</div>
-</div>
-
-</body>
-</html><!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>JSHint Report</title>
-
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-</head>
-<body>
-
-<div class="container-fluid">
-    <table class="table table-hover">
-        <tr>
-            <th class="text-center">Code</th>
-            <th class="text-center">Line</th>
-            <th class="text-center">Column</th>
-            <th>Evidence</th>
-            <th>Reason</th>
-        </tr>
-        <tr><td colspan="5"><b>/home/user/Pulak/LnT_Projects/angular-node-STB/client/src/app/guide/rowHeader.js</b></td></tr><tr class="warning">
-    <td class="text-center">W033</td>
-    <td class="text-center">35</td>
-    <td class="text-center">18</td>
-    <td><code>				}</code></td>
-    <td>Missing semicolon.</td>
-</tr>
-    </table>
-    <div class="well">
-    Found <span class="label label-default">1</span> failures - <span class="label label-danger">0 errors</span> &amp; <span class="label label-warning">1 warnings</span>
-</div>
-</div>
-
-</body>
-</html><!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>JSHint Report</title>
-
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-</head>
-<body>
-
-<div class="container-fluid">
-    <table class="table table-hover">
-        <tr>
-            <th class="text-center">Code</th>
-            <th class="text-center">Line</th>
-            <th class="text-center">Column</th>
-            <th>Evidence</th>
-            <th>Reason</th>
-        </tr>
-        <tr><td colspan="5"><b>/home/user/Pulak/LnT_Projects/angular-node-STB/client/src/common/services/data.js</b></td></tr><tr class="warning">
-    <td class="text-center">W033</td>
-    <td class="text-center">26</td>
-    <td class="text-center">4</td>
-    <td><code>  }</code></td>
-    <td>Missing semicolon.</td>
-</tr>
-    </table>
-    <div class="well">
-    Found <span class="label label-default">1</span> failures - <span class="label label-danger">0 errors</span> &amp; <span class="label label-warning">1 warnings</span>
-</div>
-</div>
-
-</body>
-</html><!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>JSHint Report</title>
-
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-</head>
-<body>
-
-<div class="container-fluid">
-    <table class="table table-hover">
-        <tr>
-            <th class="text-center">Code</th>
-            <th class="text-center">Line</th>
-            <th class="text-center">Column</th>
-            <th>Evidence</th>
-            <th>Reason</th>
-        </tr>
-        <tr><td colspan="5"><b>/home/user/Pulak/LnT_Projects/angular-node-STB/client/src/common/services/datetime.js</b></td></tr><tr class="warning">
-    <td class="text-center">W033</td>
-    <td class="text-center">42</td>
-    <td class="text-center">6</td>
-    <td><code>    }</code></td>
-    <td>Missing semicolon.</td>
-</tr><tr class="warning">
-    <td class="text-center">W033</td>
-    <td class="text-center">57</td>
-    <td class="text-center">97</td>
-    <td><code>    return startDate.toTimeString().substring(0,5) +&quot; - &quot;+ endDate.toTimeString().substring(0,5)</code></td>
-    <td>Missing semicolon.</td>
-</tr><tr class="warning">
-    <td class="text-center">W033</td>
-    <td class="text-center">85</td>
-    <td class="text-center">3</td>
-    <td><code> }</code></td>
-    <td>Missing semicolon.</td>
+    <td class="text-center">W117</td>
+    <td class="text-center">76</td>
+    <td class="text-center">5</td>
+    <td><code>    angular.forEach(states, function(state) { $stateProvider.state(state); });</code></td>
+    <td>&#039;angular&#039; is not defined.</td>
 </tr>
     </table>
     <div class="well">
     Found <span class="label label-default">3</span> failures - <span class="label label-danger">0 errors</span> &amp; <span class="label label-warning">3 warnings</span>
+</div>
+</div>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JSHint Report</title>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container-fluid">
+    <table class="table table-hover">
+        <tr>
+            <th class="text-center">Code</th>
+            <th class="text-center">Line</th>
+            <th class="text-center">Column</th>
+            <th>Evidence</th>
+            <th>Reason</th>
+        </tr>
+        <tr><td colspan="5"><b>/home/user/Pulak/Projects/angular-node-starter-kit/client/src/app/module-1/module1Controller.js</b></td></tr><tr class="warning">
+    <td class="text-center">W097</td>
+    <td class="text-center">1</td>
+    <td class="text-center">1</td>
+    <td><code>&#039;use strict&#039;;</code></td>
+    <td>Use the function form of &quot;use strict&quot;.</td>
+</tr><tr class="warning">
+    <td class="text-center">W117</td>
+    <td class="text-center">2</td>
+    <td class="text-center">1</td>
+    <td><code>angApp.controller(&#039;module-1&#039;, [&#039;$scope&#039;, function ($scope) {</code></td>
+    <td>&#039;angApp&#039; is not defined.</td>
+</tr>
+    </table>
+    <div class="well">
+    Found <span class="label label-default">2</span> failures - <span class="label label-danger">0 errors</span> &amp; <span class="label label-warning">2 warnings</span>
+</div>
+</div>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JSHint Report</title>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container-fluid">
+    <table class="table table-hover">
+        <tr>
+            <th class="text-center">Code</th>
+            <th class="text-center">Line</th>
+            <th class="text-center">Column</th>
+            <th>Evidence</th>
+            <th>Reason</th>
+        </tr>
+        <tr><td colspan="5"><b>/home/user/Pulak/Projects/angular-node-starter-kit/client/src/app/module-2/module2Controller.js</b></td></tr><tr class="warning">
+    <td class="text-center">W097</td>
+    <td class="text-center">1</td>
+    <td class="text-center">1</td>
+    <td><code>&#039;use strict&#039;;</code></td>
+    <td>Use the function form of &quot;use strict&quot;.</td>
+</tr><tr class="warning">
+    <td class="text-center">W117</td>
+    <td class="text-center">2</td>
+    <td class="text-center">1</td>
+    <td><code>angApp.controller(&#039;module-2&#039;, [&#039;$scope&#039;, function ($scope) {</code></td>
+    <td>&#039;angApp&#039; is not defined.</td>
+</tr>
+    </table>
+    <div class="well">
+    Found <span class="label label-default">2</span> failures - <span class="label label-danger">0 errors</span> &amp; <span class="label label-warning">2 warnings</span>
+</div>
+</div>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JSHint Report</title>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container-fluid">
+    <table class="table table-hover">
+        <tr>
+            <th class="text-center">Code</th>
+            <th class="text-center">Line</th>
+            <th class="text-center">Column</th>
+            <th>Evidence</th>
+            <th>Reason</th>
+        </tr>
+        <tr><td colspan="5"><b>/home/user/Pulak/Projects/angular-node-starter-kit/client/src/app/module-3/module3Controller.js</b></td></tr><tr class="warning">
+    <td class="text-center">W097</td>
+    <td class="text-center">1</td>
+    <td class="text-center">1</td>
+    <td><code>&#039;use strict&#039;;</code></td>
+    <td>Use the function form of &quot;use strict&quot;.</td>
+</tr><tr class="warning">
+    <td class="text-center">W117</td>
+    <td class="text-center">2</td>
+    <td class="text-center">1</td>
+    <td><code>angApp.controller(&#039;module-3&#039;, [&#039;$scope&#039;, function ($scope) {</code></td>
+    <td>&#039;angApp&#039; is not defined.</td>
+</tr>
+    </table>
+    <div class="well">
+    Found <span class="label label-default">2</span> failures - <span class="label label-danger">0 errors</span> &amp; <span class="label label-warning">2 warnings</span>
+</div>
+</div>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JSHint Report</title>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container-fluid">
+    <table class="table table-hover">
+        <tr>
+            <th class="text-center">Code</th>
+            <th class="text-center">Line</th>
+            <th class="text-center">Column</th>
+            <th>Evidence</th>
+            <th>Reason</th>
+        </tr>
+        <tr><td colspan="5"><b>/home/user/Pulak/Projects/angular-node-starter-kit/client/src/app/module-4/module4Controller.js</b></td></tr><tr class="warning">
+    <td class="text-center">W097</td>
+    <td class="text-center">1</td>
+    <td class="text-center">1</td>
+    <td><code>&#039;use strict&#039;;</code></td>
+    <td>Use the function form of &quot;use strict&quot;.</td>
+</tr><tr class="warning">
+    <td class="text-center">W117</td>
+    <td class="text-center">2</td>
+    <td class="text-center">1</td>
+    <td><code>angApp.controller(&#039;module-4&#039;, [&#039;$scope&#039;, function ($scope) {</code></td>
+    <td>&#039;angApp&#039; is not defined.</td>
+</tr>
+    </table>
+    <div class="well">
+    Found <span class="label label-default">2</span> failures - <span class="label label-danger">0 errors</span> &amp; <span class="label label-warning">2 warnings</span>
+</div>
+</div>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JSHint Report</title>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container-fluid">
+    <table class="table table-hover">
+        <tr>
+            <th class="text-center">Code</th>
+            <th class="text-center">Line</th>
+            <th class="text-center">Column</th>
+            <th>Evidence</th>
+            <th>Reason</th>
+        </tr>
+        <tr><td colspan="5"><b>/home/user/Pulak/Projects/angular-node-starter-kit/client/src/app/module-5/module5Controller.js</b></td></tr><tr class="warning">
+    <td class="text-center">W097</td>
+    <td class="text-center">1</td>
+    <td class="text-center">1</td>
+    <td><code>&#039;use strict&#039;;</code></td>
+    <td>Use the function form of &quot;use strict&quot;.</td>
+</tr><tr class="warning">
+    <td class="text-center">W117</td>
+    <td class="text-center">2</td>
+    <td class="text-center">1</td>
+    <td><code>angApp.controller(&#039;module-5&#039;, [&#039;$scope&#039;, function ($scope) {</code></td>
+    <td>&#039;angApp&#039; is not defined.</td>
+</tr>
+    </table>
+    <div class="well">
+    Found <span class="label label-default">2</span> failures - <span class="label label-danger">0 errors</span> &amp; <span class="label label-warning">2 warnings</span>
+</div>
+</div>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JSHint Report</title>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container-fluid">
+    <table class="table table-hover">
+        <tr>
+            <th class="text-center">Code</th>
+            <th class="text-center">Line</th>
+            <th class="text-center">Column</th>
+            <th>Evidence</th>
+            <th>Reason</th>
+        </tr>
+        <tr><td colspan="5"><b>/home/user/Pulak/Projects/angular-node-starter-kit/client/src/app/module-7/module-7Controller.js</b></td></tr><tr class="warning">
+    <td class="text-center">W097</td>
+    <td class="text-center">1</td>
+    <td class="text-center">1</td>
+    <td><code>&#039;use strict&#039;;</code></td>
+    <td>Use the function form of &quot;use strict&quot;.</td>
+</tr><tr class="warning">
+    <td class="text-center">W117</td>
+    <td class="text-center">2</td>
+    <td class="text-center">1</td>
+    <td><code>angApp.controller(&#039;module-7&#039;, [&#039;$scope&#039;, function ($scope) {</code></td>
+    <td>&#039;angApp&#039; is not defined.</td>
+</tr>
+    </table>
+    <div class="well">
+    Found <span class="label label-default">2</span> failures - <span class="label label-danger">0 errors</span> &amp; <span class="label label-warning">2 warnings</span>
+</div>
+</div>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JSHint Report</title>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container-fluid">
+    <table class="table table-hover">
+        <tr>
+            <th class="text-center">Code</th>
+            <th class="text-center">Line</th>
+            <th class="text-center">Column</th>
+            <th>Evidence</th>
+            <th>Reason</th>
+        </tr>
+        <tr><td colspan="5"><b>/home/user/Pulak/Projects/angular-node-starter-kit/client/src/common/services/authentication.js</b></td></tr><tr class="warning">
+    <td class="text-center">W097</td>
+    <td class="text-center">1</td>
+    <td class="text-center">1</td>
+    <td><code>&#039;use strict&#039;;</code></td>
+    <td>Use the function form of &quot;use strict&quot;.</td>
+</tr><tr class="warning">
+    <td class="text-center">W117</td>
+    <td class="text-center">5</td>
+    <td class="text-center">1</td>
+    <td><code>angApp.factory(&#039;authentication&#039;, [&#039;$http&#039;, function ($http) {</code></td>
+    <td>&#039;angApp&#039; is not defined.</td>
+</tr>
+    </table>
+    <div class="well">
+    Found <span class="label label-default">2</span> failures - <span class="label label-danger">0 errors</span> &amp; <span class="label label-warning">2 warnings</span>
+</div>
+</div>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JSHint Report</title>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container-fluid">
+    <table class="table table-hover">
+        <tr>
+            <th class="text-center">Code</th>
+            <th class="text-center">Line</th>
+            <th class="text-center">Column</th>
+            <th>Evidence</th>
+            <th>Reason</th>
+        </tr>
+        <tr><td colspan="5"><b>/home/user/Pulak/Projects/angular-node-starter-kit/client/src/common/services/data.js</b></td></tr><tr class="warning">
+    <td class="text-center">W097</td>
+    <td class="text-center">1</td>
+    <td class="text-center">1</td>
+    <td><code>&#039;use strict&#039;;</code></td>
+    <td>Use the function form of &quot;use strict&quot;.</td>
+</tr><tr class="warning">
+    <td class="text-center">W033</td>
+    <td class="text-center">31</td>
+    <td class="text-center">4</td>
+    <td><code>  }</code></td>
+    <td>Missing semicolon.</td>
+</tr><tr class="warning">
+    <td class="text-center">W117</td>
+    <td class="text-center">6</td>
+    <td class="text-center">1</td>
+    <td><code>angApp.factory(&#039;data&#039;, [ &#039;$http&#039;, &#039;$q&#039;, function ($http, $q) {</code></td>
+    <td>&#039;angApp&#039; is not defined.</td>
+</tr>
+    </table>
+    <div class="well">
+    Found <span class="label label-default">3</span> failures - <span class="label label-danger">0 errors</span> &amp; <span class="label label-warning">3 warnings</span>
+</div>
+</div>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JSHint Report</title>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container-fluid">
+    <table class="table table-hover">
+        <tr>
+            <th class="text-center">Code</th>
+            <th class="text-center">Line</th>
+            <th class="text-center">Column</th>
+            <th>Evidence</th>
+            <th>Reason</th>
+        </tr>
+        <tr><td colspan="5"><b>/home/user/Pulak/Projects/angular-node-starter-kit/client/src/common/services/datetime.js</b></td></tr><tr class="warning">
+    <td class="text-center">W097</td>
+    <td class="text-center">1</td>
+    <td class="text-center">1</td>
+    <td><code>&#039;use strict&#039;;</code></td>
+    <td>Use the function form of &quot;use strict&quot;.</td>
+</tr><tr class="warning">
+    <td class="text-center">W033</td>
+    <td class="text-center">32</td>
+    <td class="text-center">3</td>
+    <td><code> }</code></td>
+    <td>Missing semicolon.</td>
+</tr><tr class="warning">
+    <td class="text-center">W117</td>
+    <td class="text-center">6</td>
+    <td class="text-center">1</td>
+    <td><code>angApp.factory(&#039;dateTime&#039;, [ function () {</code></td>
+    <td>&#039;angApp&#039; is not defined.</td>
+</tr>
+    </table>
+    <div class="well">
+    Found <span class="label label-default">3</span> failures - <span class="label label-danger">0 errors</span> &amp; <span class="label label-warning">3 warnings</span>
+</div>
+</div>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JSHint Report</title>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container-fluid">
+    <table class="table table-hover">
+        <tr>
+            <th class="text-center">Code</th>
+            <th class="text-center">Line</th>
+            <th class="text-center">Column</th>
+            <th>Evidence</th>
+            <th>Reason</th>
+        </tr>
+        <tr><td colspan="5"><b>/home/user/Pulak/Projects/angular-node-starter-kit/client/src/app/module-6/partials/module6Controller.js</b></td></tr><tr class="warning">
+    <td class="text-center">W097</td>
+    <td class="text-center">1</td>
+    <td class="text-center">1</td>
+    <td><code>&#039;use strict&#039;;</code></td>
+    <td>Use the function form of &quot;use strict&quot;.</td>
+</tr><tr class="warning">
+    <td class="text-center">W117</td>
+    <td class="text-center">2</td>
+    <td class="text-center">1</td>
+    <td><code>angApp.controller(&#039;module-6&#039;, [&#039;$scope&#039;, function ($scope) {</code></td>
+    <td>&#039;angApp&#039; is not defined.</td>
+</tr>
+    </table>
+    <div class="well">
+    Found <span class="label label-default">2</span> failures - <span class="label label-danger">0 errors</span> &amp; <span class="label label-warning">2 warnings</span>
 </div>
 </div>
 

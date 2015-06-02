@@ -12,24 +12,15 @@ angApp.config(function($stateProvider, $urlRouterProvider) {
 
     states.push({   name: 'header',
         url: '/',
-
-        views: {
-        '@':   { templateUrl: 'templates/partials/header.tpl.html',
-                 controller: function () {}
-               }
-        }
+        templateUrl: 'templates/partials/header.tpl.html'
     });
 
     // tab
     states.push({   name: 'header.module1',
-        url: '',
-        views: { 'viewName':
-                    { templateUrl: ''}
-        },
+        url: '/home',
+        templateUrl: 'templates/module-1/partials/module-1.tpl.html',
         resolve: {
-        },
-        deepStateRedirect: true,
-        sticky: true
+        }
     });
 
     states.push({ name: 'header.module2',
@@ -84,11 +75,11 @@ angApp.config(function($stateProvider, $urlRouterProvider) {
 
     angular.forEach(states, function(state) { $stateProvider.state(state); });
 
-    $urlRouterProvider.otherwise("/");
+    $urlRouterProvider.otherwise("/home");
 
 });
 
-cloudStbApp.run(function ($rootScope, $state) {
+angApp.run(function ($rootScope, $state) {
     $rootScope.$state = $state;
     $rootScope.$on("$stateChangeSuccess", function() {});
 });

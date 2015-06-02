@@ -70,8 +70,7 @@ module.exports = {
             'vendor/bower_components/jquery/dist/jquery.min.js',
             'vendor/bower_components/angular/angular.min.js',
             'vendor/bower_components/angular-resource/angular-resource.min.js',
-            'vendor/bower_components/angular-ui-router/release/angular-ui-router.min.js',
-            'vendor/bower_components/ui-router-extras/release/ct-ui-router-extras.min.js'
+            'vendor/bower_components/angular-ui-router/release/angular-ui-router.min.js'
         ],
         css: [
             'vendor/bower_components/bootstrap/dist/css/bootstrap.min.css'

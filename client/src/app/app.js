@@ -21,7 +21,7 @@ angApp.config(function($stateProvider, $urlRouterProvider) {
     });
 
     // tab
-    states.push({   name: 'header.home',
+    states.push({   name: 'header.module1',
         url: '',
         views: { 'viewName':
                     { templateUrl: ''}
@@ -32,7 +32,7 @@ angApp.config(function($stateProvider, $urlRouterProvider) {
         sticky: true
     });
 
-    states.push({ name: 'header.signup',
+    states.push({ name: 'header.module2',
         url: '',
         templateUrl: '',
         controller: '',
@@ -40,7 +40,7 @@ angApp.config(function($stateProvider, $urlRouterProvider) {
         }
     });
 
-    states.push({ name: 'header.signout',
+    states.push({ name: 'header.module3',
         url: '',
         controller: '',
         resolve:{
@@ -49,16 +49,34 @@ angApp.config(function($stateProvider, $urlRouterProvider) {
         templateUrl: ''
     });
 
-    states.push({ name: 'header.signin',
+    states.push({ name: 'header.module4',
         url: '',
         controller: '',
         templateUrl: ''
     });
 
-    states.push({   name: 'header.services',
+    states.push({   name: 'header.module5',
         url: '',
         views: { '':
             { templateUrl: ''}
+        },
+        resolve: {
+        }
+    });
+
+    states.push({   name: 'header.module6',
+        url: '',
+        views: { '':
+        { templateUrl: ''}
+        },
+        resolve: {
+        }
+    });
+
+    states.push({   name: 'header.module7',
+        url: '',
+        views: { '':
+        { templateUrl: ''}
         },
         resolve: {
         }

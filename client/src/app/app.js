@@ -10,20 +10,20 @@ angApp.config(function($stateProvider, $urlRouterProvider) {
 
     var states = [];
 
-    states.push({   name: 'header',
+    states.push({   name: 'home',
         url: '/',
-        templateUrl: 'templates/partials/header.tpl.html'
+        templateUrl: 'templates/partials/home.tpl.html'
     });
 
     // tab
-    states.push({   name: 'header.module1',
-        url: '/home',
-        templateUrl: 'templates/module-1/partials/module-1.tpl.html',
+    states.push({   name: 'module2',
+        url: '/module2  ',
+        templateUrl: 'templates/module-2/partials/module-2.tpl.html',
         resolve: {
         }
     });
 
-    states.push({ name: 'header.module2',
+/*    states.push({ name: 'header.module2',
         url: '',
         templateUrl: '',
         controller: '',
@@ -71,11 +71,11 @@ angApp.config(function($stateProvider, $urlRouterProvider) {
         },
         resolve: {
         }
-    });
+    });*/
 
     angular.forEach(states, function(state) { $stateProvider.state(state); });
 
-    $urlRouterProvider.otherwise("/home");
+    $urlRouterProvider.otherwise("/");
 
 });
 

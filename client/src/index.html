@@ -7,11 +7,49 @@
 </head>
 <body>
 <div class="container">
-    <div class="row">
-        <div ui-view></div>
-    </div>
-</div>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" ui-sref="home">Project name</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                    <!-- ui-sref is a great directive for linking a state location with an anchor link.
+                         You should almost always use ui-sref instead of href on your links when you want
+                         then to navigate to a state. When this link is clicked it will take the application
+                         to the 'home' state. Behind the scenes the directive also adds the correct href attr
+                         and url. -->
+                    <ul class="nav navbar-nav">
+                        <!-- Here you can see ui-sref in action again. Also notice the use of $state.includes, which
+                             will set the links to 'active' if, for example on the first link, 'contacts' or any of
+                             its descendant states are activated. -->
+                        <li ng-class="{active: $state.includes('module2')}"><a ui-sref="module2">Module 2</a></li>
+                        <li ui-sref-active="active"><a ui-sref="module3">Module3</a></li>
+                        <li ui-sref-active="active"><a ui-sref="module4">Module4</a></li>
+                        <li ui-sref-active="active"><a ui-sref="module5">Module5</a></li>
+                        <li ui-sref-active="active"><a ui-sref="module6">Module6</a></li>
+                        <li ui-sref-active="active"><a ui-sref="module7">Module7</a></li>
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="../navbar-static-top/">Login</a></li>
+                    </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Here is the main ui-view (unnamed) and will be populated by its immediate children's templates
+             unless otherwise explicitly named views are targeted. It's also employing ng-animate. -->
+    <div ui-view class="jumbotron"></div>
+
+    <!-- Include JS files -->
     <script src="/dist/js/vendors.js"></script>
     <script src="/dist/js/application.js"></script>
+</div>
 </body>
 </html>

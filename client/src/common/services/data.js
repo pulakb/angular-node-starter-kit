@@ -25,9 +25,26 @@ angApp.factory('data', [ '$http', '$q', function ($http, $q) {
     return deferred.promise;
   }
 
+  /*
+  * @Description: send contact us data to server for saving in DB
+  * */
+  function saveContactUs (formData) {
+      var deferred = $q.defer();
+
+      $http.post('http://192.168.0.99:9090/general/contactus', formData).
+          success(function(data, status, headers, config) {
+              deferred.resolve(true);
+          }).
+          error(function(data, status, headers, config) {
+              deferred.reject(false);
+          });
+      return deferred.promise;
+  }
+
   return {
     functionName1: functionName1,
-    functionName2: functionName2
+    functionName2: functionName2,
+    saveContactUs: saveContactUs
   }
 
 }]);

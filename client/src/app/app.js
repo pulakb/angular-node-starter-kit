@@ -2,6 +2,7 @@
 /*
 * @Description: Main Application file. Define all states here.
 *
+* Try to follow style guide from https://github.com/johnpapa/angular-styleguide
 * */
 
 var angApp = angular.module('angApp', ['ui.router']);
@@ -65,7 +66,7 @@ angApp.config(function($stateProvider, $urlRouterProvider) {
         url: '/contactus',
         templateUrl: 'templates/contactus/partials/contactus-form.tpl.html',
         resolve:{},
-        controller: 'contactUsController'
+        controller: 'contactUsCtrl'
     });
 
     angular.forEach(states, function(state) { $stateProvider.state(state); });

@@ -1,7 +1,7 @@
 {
-  "name": "Angular-node-STB-Server",
+  "name": "Angular-Node-Starter-Kit-Server",
   "version": "0.0.1",
-  "description": "Angular Node STB Server",
+  "description": "Angular-Node-Starter-Kit Server",
   "main": "app.js",
   "author": "Pulak",
   "scripts": {

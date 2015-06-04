@@ -1,4 +1,4 @@
 'use strict';
-angApp.controller('module-1', ['$scope', function ($scope) {
+angApp.controller('homeController', ['$scope', function ($scope) {
 
 }]);

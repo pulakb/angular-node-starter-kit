@@ -6,6 +6,7 @@ var express = require('express'),
     serveStatic = require('serve-static'),
 	config = require('./config/config.js'),
     routes = require('./lib/routes/'),
+    generalRouter = require('./lib/routes/general.js'),
     socialRoutes = require('./lib/routes/tweet.js'),
     mongoose = require('mongoose'),
 	cors = require('cors'),
@@ -67,10 +68,19 @@ router.get('/', function (req, res) {
     res.send('Hello');
 });
 
+// Set Routers
+router.post('/contactus', function (req, res) {
+    res.send('Hello');
+});
+
 // Call the router
 app.use('/', router);
 
 // Call the Router - user
 app.use('/user/', routes);
+
+app.use('/general/', generalRouter);
+
+
 
 module.exports = app;

@@ -12,66 +12,61 @@ angApp.config(function($stateProvider, $urlRouterProvider) {
 
     states.push({   name: 'home',
         url: '/',
-        templateUrl: 'templates/partials/home.tpl.html'
+        templateUrl: 'templates/partials/home.tpl.html',
+        resolve: {},
+        controller: 'homeController'
     });
 
     // tab
     states.push({   name: 'module2',
         url: '/module2  ',
         templateUrl: 'templates/module-2/partials/module-2.tpl.html',
-        resolve: {
-        }
+        resolve: {},
+        controller: 'module2Controller'
+
     });
 
-/*    states.push({ name: 'header.module2',
-        url: '',
-        templateUrl: '',
-        controller: '',
-        resolve: {
-        }
+    states.push({ name: 'module3',
+        url: '/module3',
+        templateUrl: 'templates/module-3/partials/module-3.tpl.html',
+        resolve:{},
+        controller: 'module3Controller'
     });
 
-    states.push({ name: 'header.module3',
-        url: '',
-        controller: '',
-        resolve:{
-
-        },
-        templateUrl: ''
+    states.push({ name: 'module4',
+        url: '/module4',
+        templateUrl: 'templates/module-4/partials/module-4.tpl.html',
+        resolve:{},
+        controller: 'module4Controller'
     });
 
-    states.push({ name: 'header.module4',
-        url: '',
-        controller: '',
-        templateUrl: ''
+    states.push({   name: 'module5',
+        url: '/module5',
+        templateUrl: 'templates/module-5/partials/module-5.tpl.html',
+        resolve:{},
+        controller: 'module5Controller'
     });
 
-    states.push({   name: 'header.module5',
-        url: '',
-        views: { '':
-            { templateUrl: ''}
-        },
-        resolve: {
-        }
+    states.push({   name: 'module6',
+        url: '/module6',
+        templateUrl: 'templates/module-6/partials/module-6.tpl.html',
+        resolve:{},
+        controller: 'module6Controller'
     });
 
-    states.push({   name: 'header.module6',
-        url: '',
-        views: { '':
-        { templateUrl: ''}
-        },
-        resolve: {
-        }
+    states.push({   name: 'module7',
+        url: '/module7',
+        templateUrl: 'templates/module-7/partials/module-7-form-1.tpl.html',
+        resolve:{},
+        controller: 'module7Controller'
     });
 
-    states.push({   name: 'header.module7',
-        url: '',
-        views: { '':
-        { templateUrl: ''}
-        },
-        resolve: {
-        }
-    });*/
+    states.push({   name: 'contactus',
+        url: '/contactus',
+        templateUrl: 'templates/contactus/partials/contactus-form.tpl.html',
+        resolve:{},
+        controller: 'contactUsController'
+    });
 
     angular.forEach(states, function(state) { $stateProvider.state(state); });
 

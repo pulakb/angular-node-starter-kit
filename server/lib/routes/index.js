@@ -13,22 +13,22 @@ var Provider = require('../modules/');
  });
 
 // route
-router.post('/signUp', function(req, res) {
+router.post('/registration', function(req, res) {
 
 });
 
 //User will log in using email and password. So during registration email can't be duplicated.
-router.post('/signUp/check/email', function(req, res) {
+router.post('/registration/check/email', function(req, res) {
 
 });
 
 // route
-router.get('/signOut', function (req, res) {
+router.get('/logout', function (req, res) {
 
 });
 
 // route
-router.get('/signIn', function(req, res) {
+router.get('/login', function(req, res) {
 
 
 });

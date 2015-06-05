@@ -62,6 +62,20 @@ angApp.config(function($stateProvider, $urlRouterProvider) {
         controller: 'module7Controller'
     });
 
+    states.push({   name: 'registration',
+        url: '/registration',
+        templateUrl: 'templates/registration/partials/registration-form.tpl.html',
+        resolve:{},
+        controller: 'registrationCtrl'
+    });
+
+    states.push({   name: 'login',
+        url: '/login',
+        templateUrl: 'templates/login/partials/login-form.tpl.html',
+        resolve:{},
+        controller: 'loginCtrl'
+    });
+
     states.push({   name: 'contactus',
         url: '/contactus',
         templateUrl: 'templates/contactus/partials/contactus-form.tpl.html',

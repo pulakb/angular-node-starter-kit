@@ -41,10 +41,21 @@ angApp.factory('data', [ '$http', '$q', function ($http, $q) {
       return deferred.promise;
   }
 
+  /*
+  * @Description: for module-4, getTopicsList()
+  * */
+
+  function getTopicsList() {
+      // $http returns a promise for the url data
+      return $http({method: 'GET', url: 'http://192.168.0.99:9090/topics/list'});
+  }
+
+
   return {
     functionName1: functionName1,
     functionName2: functionName2,
-    saveContactUs: saveContactUs
+    saveContactUs: saveContactUs,
+    getTopicsList: getTopicsList
   }
 
 }]);

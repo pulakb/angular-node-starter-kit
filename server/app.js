@@ -7,6 +7,7 @@ var express = require('express'),
 	config = require('./config/config.js'),
     routes = require('./lib/routes/'),
     generalRouter = require('./lib/routes/general.js'),
+    topicsRouter = require('./lib/routes/topics.js'),
     socialRoutes = require('./lib/routes/tweet.js'),
     mongoose = require('mongoose'),
 	cors = require('cors'),
@@ -81,6 +82,7 @@ app.use('/user/', routes);
 
 app.use('/general/', generalRouter);
 
-
+// Handles all topics route
+app.use('/topics/', topicsRouter);
 
 module.exports = app;

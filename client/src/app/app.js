@@ -34,6 +34,7 @@ angApp.config(function($stateProvider, $urlRouterProvider) {
         controller: 'module3Controller'
     });
 
+    //Topics
     states.push({ name: 'module4',
         url: '/module4',
         templateUrl: 'templates/module-4/partials/module-4.tpl.html',

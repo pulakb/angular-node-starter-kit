@@ -34,12 +34,19 @@ angApp.config(function($stateProvider, $urlRouterProvider) {
         controller: 'module3Controller'
     });
 
-    //Topics
+    //Topics/Developer registration
     states.push({ name: 'module4',
         url: '/module4',
         templateUrl: 'templates/module-4/partials/module-4.tpl.html',
         resolve:{},
         controller: 'module4Controller'
+    });
+
+    states.push({ name: 'module4.registration',
+        url: '/registration',
+        templateUrl: 'templates/module-4/partials/module-4-form.tpl.html',
+        resolve:{},
+        controller: ''
     });
 
     states.push({   name: 'module5',

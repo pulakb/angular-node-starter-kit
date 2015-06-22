@@ -1,1 +1,110 @@
-<!-- Module 4 Form => Create Topic Page -->
+<!-- Module 4 Form => Developer Registration Page
+     Fields:
+        1. What is your First Name?
+        2. What is your Last Name?*
+        3.Your Email id:*
+        4.Your primary Phone Number:*
+        6.Your Gender:*
+        7.Github URL
+        8.LinkedIn URL
+        9.Role: ios developer/android/web/C++/C/Cloud/Full Stack/Graphics Designer/ Web Designer/Tester other
+            if other, then specify
+        10.What are your current skill set(s)?
+            (JavaScript, Python, UI/UX, Objective-C, Adobe Photoshop, HTML/CSS, Java, etc.)
+
+        11. What skill set(s) would you like to learn?
+            (Swift, Haskell, HTML5, Ajax, jQuery, etc.)
+
+        12. Upload CV
+        13. Upload Photo
+-->
+
+<div class="col-lg-12 col-md-12 col-sm-12">
+    <div class="alert alert-danger" ng-show="error">
+        <button class="close" data-dismiss="alert">x</button>
+        <strong>Error!</strong> An error occured while trying to send message.
+    </div>
+    <div class="alert alert-success" ng-show="success">
+        <button class="close" data-dismiss="alert">x</button>
+        {{$scope.success}}
+        <strong>Success! </strong> Your message was successfully sent.
+    </div>
+    <form role="form" name="developerRegistrationForm">
+        <div class="form-group" ng-class="{error: developerRegistrationForm.fname.$invalid}">
+            <label>First Name</label>
+            <input class="form-control" type="text" name="name" ng-model="userRole.fname" required="required" placeholder="First Name">
+            <span class="help-block" ng-show="developerRegistrationForm.fname.$error.required">Required</span>
+        </div>
+        <div class="form-group" ng-class="{error: developerRegistrationForm.lname.$invalid}">
+            <label>Last Name</label>
+            <input class="form-control" type="text" name="lname" ng-model="userRole.lname" required="required" placeholder="Last Name">
+            <span class="help-block" ng-show="developerRegistrationForm.lname.$error.required">Required</span>
+        </div>
+        <div class="form-group" ng-class="{error: developerRegistrationForm.email.$invalid}">
+            <label>Email</label>
+            <input class="form-control" type="email" name="email" ng-model="userRole.email" required="required" placeholder="Email Address">
+            <span class="help-block" ng-show="developerRegistrationForm.email.$error.required">Required</span>
+            <span class="help-block" ng-show="developerRegistrationForm.email.$error.email">Invalid email address</span>
+        </div>
+        <div class="form-group" ng-class="{error: developerRegistrationForm.phone.$invalid}">
+            <label>Phone</label>
+            <input class="form-control" type="text" name="phone" ng-model="userRole.phone" required="required" placeholder="phone">
+            <span class="help-inline" ng-show="developerRegistrationForm.message.$error.required">Required</span>
+        </div>
+        <div class="form-group" ng-class="{error: developerRegistrationForm.gender.$invalid}">
+            <label>Gender</label>
+            <input type="radio" name="gender" ng-model="userRole.gender" value="male" required="required"/>male
+            <input type="radio" name="gender" ng-model="userRole.gender" value="female" required="required"/>female<br />
+            <span class="help-inline" ng-show="developerRegistrationForm.gender.$error.required">Required</span>
+        </div>
+        <div class="form-group" ng-class="{error: developerRegistrationForm.githubURL.$invalid}">
+            <label>Github URL</label>
+            <input class="form-control" type="text" name="githubURL" ng-model="userRole.githubURL" required="required" placeholder="Github URL" />
+            <span class="help-inline" ng-show="developerRegistrationForm.githubURL.$error.required">Required</span>
+        </div>
+        <div class="form-group" ng-class="{error: developerRegistrationForm.linkedinURL.$invalid}">
+            <label>LinkedIn URL</label>
+            <input class="form-control" type="text" name="linkedinURL" ng-model="userRole.linkedinURL" required="required" placeholder="Github URL" />
+            <span class="help-inline" ng-show="developerRegistrationForm.linkedinURL.$error.required">Required</span>
+        </div>
+        <div class="form-group" ng-class="{error: developerRegistrationForm.linkedinURL.$invalid}">
+            <label>Role</label>
+            <select ng-model="userRole.role">
+                <option value="0">ios Developer</option>
+                <option value="1">Android Developer</option>
+                <option value="2">Web Developer</option>
+                <option value="3">C Developer</option>
+                <option value="4">C++ Developer</option>
+                <option value="5">HTML Developer</option>
+                <option value="5">Ruby on Rails Developer</option>
+                <option value="6">Python Developer</option>
+                <option value="7">Node.js Developer</option>
+                <option value="8">Full-Stack Developer</option>
+                <option value="9">Other</option>
+            </select>
+            <input class="form-control" type="text" name="role" ng-model="userRole.role" required="required" placeholder="Role Name">
+            <span class="help-inline" ng-show="developerRegistrationForm.role.$error.required">Required</span>
+        </div>
+        <div class="form-group" ng-class="{error: developerRegistrationForm.skillset.$invalid}">
+            <label>What are your current skillset?</label>
+            <textarea class="form-control" rows="5" name="skillset" ng-model="userRole.skillset" required="required" placeholder="Skill Set"></textarea>
+            <span class="help-inline" ng-show="developerRegistrationForm.skillset.$error.required">Required</span>
+        </div>
+        <div class="form-group" ng-class="{error: developerRegistrationForm.learnSkillset.$invalid}">
+            <label>What skill set(s) would you like to learn?</label>
+            <textarea class="form-control" rows="5" name="learnSkillset" ng-model="userRole.learnSkillset" required="required" placeholder="Skill to learn"></textarea>
+            <span class="help-inline" ng-show="developerRegistrationForm.learnSkillset.$error.required">Required</span>
+        </div>
+        <div class="form-group" ng-class="{error: developerRegistrationForm.resume.$invalid}">
+            <label>Upload your CV</label>
+            <input class="form-control" type="file" name="resume" ng-model="userRole.resume" required="required" placeholder="resume">
+            <span class="help-inline" ng-show="developerRegistrationForm.resume.$error.required">Required</span>
+        </div>
+        <div class="form-group" ng-class="{error: developerRegistrationForm.photo.$invalid}">
+            <label>Upload your Photo</label>
+            <input class="form-control" type="file" name="photo" ng-model="userRole.photo" required="required" placeholder="photo">
+            <span class="help-inline" ng-show="developerRegistrationForm.photo.$error.required">Required</span>
+        </div>
+        <button class="btn btn-primary btn-lg btn-block" ng-click="send()" ng-disabled="developerRegistrationForm.$invalid">Send</button>
+    </form>
+</div>
